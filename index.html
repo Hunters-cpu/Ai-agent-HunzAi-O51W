@@ -1,0 +1,2070 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>HunzAi-O51W — AI Agent untuk Bisnis Anda</title>
+<meta name="description" content="Platform WhatsApp Gateway AI Agent untuk bisnis modern.">
+<meta name="theme-color" content="#c5ff41">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230a0a0a'/%3E%3Ctext x='50' y='72' font-family='Arial Black, sans-serif' font-size='64' font-weight='900' fill='%23c5ff41' text-anchor='middle'%3EH%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HunzAi-O51W — AI Agent untuk Bisnis Anda">
+<meta property="og:description" content="Platform WhatsApp Gateway AI Agent untuk bisnis modern.">
+<meta property="og:image" content="https://hunzai-o51w.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+:root{--bg:#f1f1f1;--surface:#fff;--surface-2:#f7f7f7;--surface-dark:#0a0a0a;--text:#0a0a0a;--text-on-dark:#fff;--muted:#6b7280;--muted-on-dark:#9ca3af;--accent:#c5ff41;--accent-hover:#b3ef2c;--accent-soft:#e9ffb8;--border:#e8e8e8;--border-strong:#d1d5db;--success:#16a34a;--danger:#dc2626;--warning:#ea580c;--info:#2563eb;--r-lg:24px;--r-md:18px;--r-sm:12px;--r-pill:999px;--shadow-sm:0 1px 2px rgba(0,0,0,.04);--shadow-md:0 6px 20px rgba(0,0,0,.06);--shadow-lg:0 12px 32px rgba(0,0,0,.08)}
+body.dark-mode{--bg:#0a0a0a;--surface:#141414;--surface-2:#1a1a1a;--surface-dark:#fff;--text:#f5f5f5;--text-on-dark:#0a0a0a;--muted:#a1a1aa;--muted-on-dark:#6b7280;--border:#262626;--border-strong:#333;--accent-soft:#3a4d1a;--shadow-sm:0 1px 2px rgba(0,0,0,.3);--shadow-md:0 6px 20px rgba(0,0,0,.4);--shadow-lg:0 12px 32px rgba(0,0,0,.5)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);margin:0;overflow-x:hidden;min-height:100vh;padding-bottom:84px;transition:background .3s,color .3s;-webkit-font-smoothing:antialiased}
+@media(min-width:992px){body{padding-bottom:0}}
+h1,h2,h3,h4,h5,h6{font-weight:800;letter-spacing:-.02em;color:var(--text)}
+.top-nav{position:fixed;top:0;left:0;right:0;z-index:1030;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:.65rem 1rem}
+.top-nav-inner{display:flex;justify-content:space-between;align-items:center;max-width:1280px;margin:0 auto}
+.brand{font-weight:900;font-size:1.15rem;letter-spacing:-.03em;color:var(--text);text-decoration:none;display:flex;align-items:center;gap:.55rem;cursor:pointer}
+.brand-icon{width:26px;height:26px;border-radius:8px;background:var(--text);color:var(--bg);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.8rem}
+body.dark-mode .brand-icon{background:var(--accent);color:#0a0a0a}
+.nav-links{display:flex;gap:.15rem;align-items:center}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.875rem;font-weight:500;padding:.5rem .85rem;border-radius:var(--r-pill);cursor:pointer;transition:all .2s}
+.nav-links a:hover{color:var(--text)}.nav-links a.active{color:var(--text);background:var(--surface)}
+.nav-icon-btn{width:38px;height:38px;border-radius:var(--r-pill);background:var(--surface);border:1px solid var(--border);color:var(--text);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:.95rem;transition:all .2s}
+.nav-icon-btn:hover{background:var(--surface-2);border-color:var(--border-strong)}
+.avatar-mini{width:36px;height:36px;border-radius:50%;background:var(--text);color:var(--bg);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;position:relative;cursor:pointer;overflow:hidden}
+body.dark-mode .avatar-mini{background:var(--accent);color:#0a0a0a}
+.avatar-mini img{width:100%;height:100%;object-fit:cover}
+.avatar-mini .online-dot{position:absolute;bottom:0;right:0;width:10px;height:10px;border-radius:50%;background:var(--success);border:2px solid var(--bg)}
+.back-btn{background:transparent;border:none;color:var(--muted);font-size:1.15rem;cursor:pointer;padding:.3rem .55rem;border-radius:var(--r-pill);transition:all .2s}
+.back-btn:hover{background:var(--surface);color:var(--text)}
+@media(min-width:992px){.back-btn{display:none!important}}
+.mobile-only{display:flex}.desktop-only{display:none}
+@media(min-width:992px){.mobile-only{display:none!important}.desktop-only{display:flex!important}}
+.bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:1040;background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(16px);border-top:1px solid var(--border);display:flex;justify-content:space-around;align-items:center;padding:.5rem .25rem calc(.5rem + env(safe-area-inset-bottom))}
+@media(min-width:992px){.bottom-nav{display:none}}
+.bnav-item{display:flex;flex-direction:column;align-items:center;gap:.15rem;background:transparent;border:none;color:var(--muted);font-size:.65rem;font-weight:500;padding:.4rem .5rem;border-radius:var(--r-pill);cursor:pointer;flex:1;min-width:0;transition:all .2s;font-family:inherit}
+.bnav-item .ico{font-size:1.2rem;line-height:1}.bnav-item.active{color:var(--text);font-weight:700}.bnav-item.active .ico{transform:translateY(-2px)}
+.sheet-overlay{position:fixed;inset:0;background:rgba(0,0,0,.4);backdrop-filter:blur(4px);z-index:1045;opacity:0;visibility:hidden;transition:all .3s}
+.sheet-overlay.show{opacity:1;visibility:visible}
+.bottom-sheet{position:fixed;bottom:0;left:0;right:0;z-index:1050;background:var(--surface);border-top-left-radius:var(--r-lg);border-top-right-radius:var(--r-lg);border:1px solid var(--border);border-bottom:none;padding:1rem 1.25rem 1.5rem;transform:translateY(100%);transition:transform .35s cubic-bezier(.32,.72,0,1);max-height:85vh;overflow-y:auto}
+.bottom-sheet.show{transform:translateY(0)}
+.sheet-handle{width:40px;height:4px;background:var(--border-strong);border-radius:999px;margin:0 auto .75rem}
+.sheet-title{text-align:center;font-weight:700;font-size:1rem;margin-bottom:1rem}
+.sheet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem}
+.sheet-item{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4rem;background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-md);padding:1rem .4rem;color:var(--text);font-size:.75rem;font-weight:600;text-align:center;cursor:pointer;transition:all .2s;font-family:inherit}
+.sheet-item:hover{background:var(--accent);border-color:var(--accent);color:#0a0a0a;transform:translateY(-2px)}
+.sheet-item .ico{font-size:1.4rem}.sheet-item.danger{color:var(--danger)}.sheet-item.danger:hover{background:var(--danger);border-color:var(--danger);color:#fff}
+.btn-primary{background:var(--text);color:var(--bg);border:none;font-weight:600;padding:.7rem 1.4rem;border-radius:var(--r-pill);cursor:pointer;font-size:.875rem;transition:all .2s;font-family:inherit;display:inline-flex;align-items:center;gap:.5rem}
+.btn-primary:hover{background:var(--accent);color:#0a0a0a;transform:translateY(-1px)}
+body.dark-mode .btn-primary{background:var(--accent);color:#0a0a0a}body.dark-mode .btn-primary:hover{background:var(--accent-hover)}
+.btn-accent{background:var(--accent);color:#0a0a0a;border:none;font-weight:700;padding:.7rem 1.4rem;border-radius:var(--r-pill);cursor:pointer;font-size:.875rem;transition:all .2s;font-family:inherit}
+.btn-accent:hover{background:var(--accent-hover);transform:translateY(-1px)}
+.btn-outline{background:transparent;color:var(--text);border:1.5px solid var(--text);font-weight:600;padding:.65rem 1.4rem;border-radius:var(--r-pill);cursor:pointer;font-size:.875rem;transition:all .2s;font-family:inherit;display:inline-flex;align-items:center;gap:.5rem}
+.btn-outline:hover{background:var(--text);color:var(--bg)}
+.btn-danger{background:transparent;color:var(--danger);border:1.5px solid rgba(220,38,38,.4);font-weight:600;padding:.55rem 1.1rem;border-radius:var(--r-pill);cursor:pointer;font-size:.82rem;transition:all .2s;font-family:inherit}
+.btn-danger:hover{background:var(--danger);color:#fff;border-color:var(--danger)}
+.btn-sm{padding:.5rem 1rem;font-size:.8rem}.btn-xs{padding:.35rem .75rem;font-size:.75rem}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.5rem;transition:all .3s;box-shadow:var(--shadow-sm)}
+.card:hover{border-color:var(--border-strong);box-shadow:var(--shadow-md)}
+.hero{text-align:center;padding:3.5rem 0 2.5rem}
+.hero h1{font-size:clamp(2rem,5.5vw,3.5rem);font-weight:900;line-height:1.05;letter-spacing:-.035em;margin-bottom:1rem}
+.hero h1 .highlight{background:var(--accent);color:#0a0a0a;padding:0 .3em;border-radius:.2em;display:inline-block}
+.hero p{color:var(--muted);max-width:560px;margin:0 auto 2rem;font-size:1rem;line-height:1.6}
+.hero-actions{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
+.live-badge,.fb-status{display:inline-flex;align-items:center;gap:.5rem;padding:.35rem .9rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-pill);font-size:.8rem;color:var(--muted);margin-bottom:1.5rem;font-weight:500}
+.section{padding:3rem 0}
+.section-title{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;text-align:center;margin-bottom:.5rem;letter-spacing:-.03em}
+.section-title .highlight{background:var(--accent);color:#0a0a0a;padding:0 .3em;border-radius:.2em}
+.section-sub{text-align:center;color:var(--muted);max-width:560px;margin:0 auto 2.5rem;font-size:.95rem;line-height:1.6}
+.section-h{font-size:1.15rem;font-weight:800;margin-bottom:1rem;display:flex;align-items:center;gap:.55rem;letter-spacing:-.02em}
+.badge{display:inline-block;padding:.3rem .75rem;border-radius:var(--r-pill);font-size:.72rem;font-weight:600;background:var(--surface-2);border:1px solid var(--border);color:var(--muted)}
+.badge.green{background:var(--accent);color:#0a0a0a;border-color:var(--accent)}
+.badge.blue{color:var(--info);border-color:rgba(37,99,235,.3);background:rgba(37,99,235,.08)}
+.badge.danger{color:var(--danger);border-color:rgba(220,38,38,.3);background:rgba(220,38,38,.08)}
+.stat-box{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.5rem;position:relative;overflow:hidden;transition:all .3s}
+.stat-box:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.stat-box .stat-bg{position:absolute;right:-1rem;top:-1rem;font-size:5rem;opacity:.04}
+.stat-box .stat-num{font-size:2.5rem;font-weight:900;line-height:1;margin-bottom:.5rem;letter-spacing:-.03em}
+.stat-box .stat-lbl{color:var(--muted);font-size:.9rem;font-weight:600}
+.stat-box .stat-row{display:flex;justify-content:space-between;margin-top:1rem;color:var(--muted);font-size:.78rem}
+.status-dot{width:8px;height:8px;border-radius:50%;background:var(--success);animation:pulse 2s infinite}
+.status-pill{display:inline-flex;align-items:center;gap:.3rem;padding:.25rem .65rem;border-radius:var(--r-pill);font-size:.68rem;font-weight:700;letter-spacing:.3px}
+.status-pill.on{background:rgba(22,163,74,.12);color:var(--success)}
+.status-pill.warn{background:rgba(234,88,12,.12);color:var(--warning)}
+.status-pill.info{background:rgba(37,99,235,.12);color:var(--info)}
+.status-pill.danger{background:rgba(220,38,38,.12);color:var(--danger)}
+.status-pill.off{background:var(--surface-2);color:var(--muted)}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem}
+.price-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:1.75rem 1.5rem;position:relative;transition:all .3s;display:flex;flex-direction:column}
+.price-card:hover{transform:translateY(-4px);border-color:var(--text);box-shadow:var(--shadow-lg)}
+.price-card.featured{background:var(--surface-dark);color:var(--text-on-dark);border-color:var(--surface-dark)}
+.price-card.featured .price-name,.price-card.featured .price-num{color:var(--text-on-dark)}
+.price-card.featured .price-desc,.price-card.featured .price-period,.price-card.featured .price-feats li{color:var(--muted-on-dark)}
+.pop-badge{position:absolute;top:-.75rem;right:1.25rem;background:var(--accent);color:#0a0a0a;font-size:.65rem;font-weight:800;padding:.35rem .8rem;border-radius:var(--r-pill);letter-spacing:.4px;text-transform:uppercase}
+.price-name{font-size:1.35rem;font-weight:800;margin-bottom:.25rem;letter-spacing:-.02em}
+.price-desc{color:var(--muted);font-size:.82rem;margin-bottom:1rem}
+.price-num{font-size:2.2rem;font-weight:900;line-height:1;letter-spacing:-.04em}
+.price-num .cur{font-size:.9rem;font-weight:600;color:var(--muted);vertical-align:top;margin-right:2px}
+.price-period{color:var(--muted);font-size:.8rem;margin-top:.35rem}
+.price-feats{list-style:none;padding:0;margin:1.25rem 0;flex-grow:1}
+.price-feats li{display:flex;align-items:center;gap:.55rem;padding:.45rem 0;font-size:.85rem;color:var(--muted)}
+.price-feats li::before{content:'';width:16px;height:16px;flex-shrink:0;background:var(--accent);border-radius:50%;background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 1 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0z'/%3e%3c/svg%3e");background-repeat:no-repeat;background-size:12px;background-position:center}
+.price-feats li.dim{opacity:.35}.price-feats li.dim::before{background:var(--border-strong)}
+.feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.feat-box{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.5rem;transition:all .3s}
+.feat-box:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--border-strong)}
+.feat-icon{width:48px;height:48px;border-radius:var(--r-sm);background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:1rem;color:#0a0a0a}
+.feat-box h3{font-size:1rem;font-weight:800;margin-bottom:.4rem;letter-spacing:-.02em}
+.feat-box p{color:var(--muted);font-size:.85rem;line-height:1.55;margin:0}
+.sys-row{display:flex;justify-content:space-between;align-items:center;padding:.6rem 0;border-bottom:1px dashed var(--border);font-size:.85rem}
+.sys-row:last-child{border-bottom:none}
+.sys-row .lbl{color:var(--muted);font-weight:500}
+.sys-row .val{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:.82rem}
+.faq-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);margin-bottom:.6rem;overflow:hidden;transition:all .2s}
+.faq-item:hover{border-color:var(--border-strong)}
+.faq-q{width:100%;background:transparent;border:none;color:var(--text);text-align:left;font-weight:700;font-size:.95rem;padding:1.1rem 1.25rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:inherit;letter-spacing:-.01em}
+.faq-q .arrow{transition:transform .3s;color:var(--muted);width:24px;height:24px;border-radius:50%;background:var(--surface-2);display:flex;align-items:center;justify-content:center;font-size:.8rem}
+.faq-item.open .faq-q .arrow{transform:rotate(180deg);background:var(--accent);color:#0a0a0a}
+.faq-a{color:var(--muted);font-size:.88rem;padding:0 1.25rem 1.1rem;line-height:1.65;display:none}
+.faq-item.open .faq-a{display:block}
+.form-group{margin-bottom:1rem}
+.form-group label{display:block;font-size:.82rem;font-weight:600;margin-bottom:.45rem;letter-spacing:-.01em}
+.form-input{width:100%;background:var(--surface-2);border:1.5px solid var(--border);color:var(--text);padding:.8rem 1rem;border-radius:var(--r-md);font-size:.9rem;font-family:inherit;transition:all .2s}
+.form-input:focus{outline:none;border-color:var(--text);background:var(--surface)}
+.form-input::placeholder{color:var(--muted)}
+.form-hint{font-size:.75rem;color:var(--muted);margin-top:.4rem}
+.pass-wrap{position:relative}.pass-wrap .form-input{padding-right:3rem}
+.pass-wrap .eye-btn{position:absolute;right:.75rem;top:50%;transform:translateY(-50%);background:transparent;border:none;color:var(--muted);cursor:pointer;font-size:1rem;padding:.25rem}
+.terminal{background:#0a0a0a;border:1px solid #1f1f1f;border-radius:var(--r-lg);overflow:hidden;font-family:'JetBrains Mono',monospace;font-size:.82rem}
+.term-head{background:#161616;padding:.7rem 1rem;display:flex;align-items:center;gap:.5rem;border-bottom:1px solid #1f1f1f}
+.term-dot{width:11px;height:11px;border-radius:50%}
+.term-dot.r{background:#ef4444}.term-dot.y{background:#f59e0b}.term-dot.g{background:#22c55e}
+.term-title{margin-left:auto;color:#9ca3af;font-size:.72rem;font-family:'Inter',sans-serif}
+.term-body{padding:1rem 1.1rem;color:#e4e4e7;min-height:300px;max-height:480px;overflow-y:auto;line-height:1.7}
+.term-line{margin-bottom:.3rem}
+.t-prompt{color:#c5ff41}.t-cmd{color:#fff}.t-out{color:#9ca3af}.t-err{color:#ef4444}.t-warn{color:#f59e0b}.t-succ{color:#c5ff41}
+.term-input{display:flex;align-items:center;gap:.5rem;padding:.8rem 1.1rem;border-top:1px solid #1f1f1f;background:#0a0a0a}
+.term-input input{flex:1;background:transparent;border:none;outline:none;color:#fff;font-family:'JetBrains Mono',monospace;font-size:.82rem}
+.term-input input::placeholder{color:#52525b}
+.wizard-wrap{max-width:480px;margin:0 auto;padding:1.5rem 0 3rem}
+.wiz-steps{display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem;padding:0 .5rem}
+.wiz-step{width:36px;height:36px;border-radius:50%;background:var(--surface);border:2px solid var(--border);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;color:var(--muted);z-index:2;transition:all .3s}
+.wiz-step.active{background:var(--text);color:var(--bg);border-color:var(--text)}
+body.dark-mode .wiz-step.active{background:var(--accent);color:#0a0a0a;border-color:var(--accent)}
+.wiz-step.done{background:var(--accent);color:#0a0a0a;border-color:var(--accent)}
+.wiz-line{flex:1;height:2px;background:var(--border);margin:0 -6px;z-index:1}
+.wiz-line.done{background:var(--accent)}
+.wiz-icon{width:72px;height:72px;border-radius:var(--r-lg);background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 1.5rem;color:#0a0a0a}
+.wiz-title{font-size:1.5rem;font-weight:900;text-align:center;margin-bottom:.6rem;letter-spacing:-.03em}
+.wiz-desc{color:var(--muted);text-align:center;font-size:.88rem;line-height:1.6;margin-bottom:1.75rem}
+.wiz-checklist{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-md);padding:1.1rem;margin-bottom:1.75rem}
+.wiz-ci{display:flex;align-items:center;gap:.6rem;font-size:.85rem;margin-bottom:.6rem;font-weight:500}
+.wiz-ci:last-child{margin-bottom:0}
+.wiz-ci .chk{color:#0a0a0a;font-size:.95rem;background:var(--accent);border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;font-weight:700}
+.wiz-actions{display:flex;justify-content:space-between;align-items:center;margin-top:2rem;gap:.75rem}
+.wiz-back{background:transparent;border:none;color:var(--muted);font-weight:600;padding:.5rem 1rem;cursor:pointer;font-family:inherit;font-size:.875rem}
+.wiz-back:hover{color:var(--text)}
+.wiz-next{background:var(--text);color:var(--bg);border:none;font-weight:700;padding:.8rem 1.9rem;border-radius:var(--r-pill);cursor:pointer;font-family:inherit;font-size:.875rem;transition:all .2s}
+.wiz-next:hover{background:var(--accent);color:#0a0a0a;transform:translateY(-1px)}
+body.dark-mode .wiz-next{background:var(--accent);color:#0a0a0a}
+.wiz-toggle-grp{display:flex;gap:.5rem;margin-top:.4rem}
+.wiz-toggle{flex:1;padding:.75rem;border-radius:var(--r-md);border:1.5px solid var(--border);background:transparent;color:var(--muted);font-weight:600;font-size:.8rem;cursor:pointer;transition:all .2s;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:.4rem}
+.wiz-toggle.active{background:var(--text);color:var(--bg);border-color:var(--text)}
+body.dark-mode .wiz-toggle.active{background:var(--accent);color:#0a0a0a;border-color:var(--accent)}
+.wiz-info{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-md);padding:1rem;display:flex;gap:.6rem;font-size:.82rem;line-height:1.5;margin-bottom:1.5rem}
+.profile-card{text-align:center;padding:2rem 1.25rem}
+.profile-avatar-wrap{position:relative;display:inline-block;margin-bottom:1rem}
+.profile-avatar{width:84px;height:84px;border-radius:50%;background:var(--accent);color:#0a0a0a;display:flex;align-items:center;justify-content:center;font-size:2rem;font-weight:900;border:3px solid var(--surface);box-shadow:0 0 0 2px var(--accent);object-fit:cover}
+.profile-edit{position:absolute;bottom:0;right:-2px;width:26px;height:26px;border-radius:50%;background:var(--text);color:var(--bg);border:2px solid var(--surface);display:flex;align-items:center;justify-content:center;font-size:.7rem;cursor:pointer}
+.profile-online{position:absolute;bottom:4px;left:-2px;width:16px;height:16px;border-radius:50%;background:var(--success);border:3px solid var(--surface)}
+.profile-name{font-size:1.5rem;font-weight:900;margin:.5rem 0 .25rem;display:flex;align-items:center;justify-content:center;gap:.5rem;letter-spacing:-.03em}
+.profile-verified{color:var(--info);font-size:.9rem}
+.profile-handle{color:var(--muted);font-size:.85rem;margin-bottom:1rem}
+.profile-tags{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin-bottom:1rem}
+.profile-bio{text-align:center;color:var(--muted);font-size:.82rem;font-style:italic;padding:1rem 0 1.25rem;border-top:1px solid var(--border);margin-top:1rem}
+.profile-actions{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
+.bot-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.25rem;margin-bottom:.85rem;transition:all .2s}
+.bot-card:hover{border-color:var(--border-strong)}
+.bot-head{display:flex;gap:.65rem;align-items:center;flex-wrap:wrap;margin-bottom:.75rem}
+.bot-name{font-weight:800;font-size:1rem;letter-spacing:-.01em}
+.bot-phone{font-family:'JetBrains Mono',monospace;font-size:.82rem;color:var(--muted);margin-bottom:.5rem}
+.bot-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.5rem;font-size:.78rem;margin-bottom:.75rem}
+.bot-meta span{color:var(--muted)}
+.bot-actions{display:flex;gap:.5rem;flex-wrap:wrap}
+.activity-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.1rem 1.25rem;margin-bottom:.7rem}
+.act-head{display:flex;gap:1rem}
+.act-icon{width:46px;height:46px;border-radius:var(--r-sm);background:var(--surface-2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.act-body{flex:1}
+.act-top{display:flex;justify-content:space-between;gap:.5rem;align-items:flex-start}
+.act-title{font-weight:700;font-size:.9rem;letter-spacing:-.01em}
+.act-time{color:var(--muted);font-size:.72rem;white-space:nowrap}
+.act-desc{color:var(--muted);font-size:.8rem;margin-top:.25rem;line-height:1.5}
+.login-hero{text-align:center;padding:3rem 0 2rem}
+.login-hero-icon{width:80px;height:80px;border-radius:var(--r-lg);background:var(--accent);display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem}
+.login-hero h2{font-size:clamp(1.5rem,4.5vw,2.2rem);margin-bottom:.5rem;letter-spacing:-.03em;font-weight:900}
+.login-hero h2 .highlight{background:var(--accent);color:#0a0a0a;padding:0 .3em;border-radius:.2em}
+.login-hero p{color:var(--muted);font-size:.9rem;max-width:400px;margin:0 auto 1.5rem;line-height:1.6}
+.login-box{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:2rem 1.75rem;max-width:420px;margin:0 auto;box-shadow:var(--shadow-md)}
+.login-tabs{display:flex;gap:.4rem;margin-bottom:1.25rem;background:var(--surface-2);padding:.3rem;border-radius:var(--r-pill)}
+.login-tab{flex:1;padding:.6rem;border-radius:var(--r-pill);border:none;background:transparent;color:var(--muted);font-weight:600;font-size:.82rem;cursor:pointer;font-family:inherit;transition:all .2s}
+.login-tab.active{background:var(--text);color:var(--bg)}
+body.dark-mode .login-tab.active{background:var(--accent);color:#0a0a0a}
+.divider-text{display:flex;align-items:center;gap:.6rem;color:var(--muted);font-size:.72rem;margin:1rem 0;font-weight:600}
+.divider-text::before,.divider-text::after{content:'';flex:1;height:1px;background:var(--border)}
+.btn-google{width:100%;padding:.8rem;border-radius:var(--r-pill);border:1.5px solid var(--border);background:transparent;color:var(--text);font-weight:600;font-size:.85rem;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.5rem;font-family:inherit;transition:all .2s}
+.btn-google:hover{background:var(--surface-2);border-color:var(--text)}
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.4);backdrop-filter:blur(6px);z-index:1060;display:none;align-items:center;justify-content:center;padding:1rem}
+.modal-overlay.show{display:flex}
+.modal-box{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.75rem;max-width:440px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:var(--shadow-lg)}
+.modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem}
+.modal-head h3{font-size:1.2rem;margin:0;letter-spacing:-.02em}
+.modal-close{background:var(--surface-2);border:none;color:var(--text);font-size:1.2rem;cursor:pointer;padding:0;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.modal-close:hover{background:var(--text);color:var(--bg)}
+.page-wrap{max-width:1280px;margin:0 auto;padding:90px 1rem 2rem}
+@media(max-width:991px){.page-wrap{padding:78px 1rem 2rem}}
+.empty-state{text-align:center;padding:2.5rem 1rem;color:var(--muted);font-size:.88rem}
+.empty-state .ico{font-size:2rem;margin-bottom:.5rem}
+.toast{position:fixed;bottom:96px;left:50%;transform:translateX(-50%) translateY(100px);background:var(--surface-dark);color:var(--text-on-dark);padding:.8rem 1.4rem;border-radius:var(--r-pill);font-size:.85rem;font-weight:600;z-index:2000;opacity:0;transition:all .3s;box-shadow:var(--shadow-lg);max-width:90vw;text-align:center}
+body.dark-mode .toast{background:var(--accent);color:#0a0a0a}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+@keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(22,163,74,.5)}50%{opacity:.6;box-shadow:0 0 0 8px rgba(22,163,74,0)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hl{display:inline-block;background:var(--accent);color:#0a0a0a;padding:.15em .6em;border-radius:.35em;font-weight:800;font-size:.75em;text-transform:uppercase;letter-spacing:.02em;margin-bottom:1rem}
+.tl-item{display:flex;gap:1rem;align-items:flex-start}
+.tl-dot{width:36px;height:36px;border-radius:50%;background:var(--accent);color:#0a0a0a;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0}
+.tl-line{margin:.75rem 0 .75rem 1.1rem;width:2px;height:20px;background:var(--border-strong)}
+.profile-menu-overlay{position:fixed;inset:0;background:rgba(0,0,0,.3);backdrop-filter:blur(2px);z-index:1055;opacity:0;visibility:hidden;transition:all .2s}
+.profile-menu-overlay.show{opacity:1;visibility:visible}
+.profile-menu{position:fixed;top:60px;right:1rem;z-index:1056;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);width:min(360px,calc(100vw - 2rem));box-shadow:var(--shadow-lg);overflow:hidden;transform:translateY(-8px) scale(.96);opacity:0;visibility:hidden;transition:all .22s cubic-bezier(.32,.72,0,1);max-height:calc(100vh - 80px);overflow-y:auto}
+.profile-menu.show{transform:translateY(0) scale(1);opacity:1;visibility:visible}
+.profile-menu-header{display:flex;gap:1rem;align-items:center;padding:1rem 1.25rem;border-bottom:1px solid var(--border)}
+.pm-avatar{width:48px;height:48px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.2rem;color:#0a0a0a;overflow:hidden}
+.pm-avatar img{width:100%;height:100%;object-fit:cover}
+.pm-info{flex:1;min-width:0}
+.pm-name{font-weight:800;font-size:1rem;letter-spacing:-.02em}
+.pm-handle{color:var(--muted);font-size:.82rem}
+.pm-status{display:flex;align-items:center;gap:.35rem;font-size:.72rem;color:var(--muted);margin-top:.15rem;font-weight:500}
+.pm-status .dot{width:6px;height:6px;border-radius:50%;background:var(--success)}
+.pm-status .dot.offline{background:var(--muted)}
+.pm-badge{padding:.25rem .65rem;border-radius:var(--r-pill);font-size:.68rem;font-weight:700;background:var(--surface-2);border:1px solid var(--border);color:var(--muted);display:inline-flex;align-items:center;gap:.25rem}
+.pm-item{display:flex;gap:1rem;align-items:center;padding:.85rem 1.25rem;cursor:pointer;transition:all .15s;border-bottom:1px solid var(--border);font-family:inherit}
+.pm-item:last-child{border-bottom:none}
+.pm-item:hover{background:var(--surface-2)}
+.pm-item .pm-icon{width:34px;height:34px;border-radius:var(--r-sm);background:transparent;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;color:var(--text)}
+.pm-item .pm-text{flex:1;min-width:0}
+.pm-item .pm-title{font-weight:600;font-size:.9rem;letter-spacing:-.01em;margin-bottom:.1rem}
+.pm-item .pm-desc{color:var(--muted);font-size:.75rem;line-height:1.4}
+.pm-item.danger .pm-title{color:var(--danger)}
+.pm-item .pm-toggle{flex-shrink:0;width:44px;height:26px;border-radius:999px;background:var(--surface-2);border:1px solid var(--border);position:relative;cursor:pointer;transition:all .2s}
+.pm-item .pm-toggle .knob{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:50%;background:var(--muted);transition:all .2s}
+.pm-item .pm-toggle.on{background:var(--text);border-color:var(--text)}
+body.dark-mode .pm-item .pm-toggle.on{background:var(--accent);border-color:var(--accent)}
+.pm-item .pm-toggle.on .knob{left:20px;background:var(--bg)}
+body.dark-mode .pm-item .pm-toggle.on .knob{background:#0a0a0a}
+.toggle-row{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--border)}
+.toggle-row:last-child{border-bottom:none}
+.toggle-row .tr-left{display:flex;gap:.85rem;align-items:flex-start;flex:1}
+.toggle-row .tr-icon{width:34px;height:34px;border-radius:var(--r-sm);background:transparent;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;color:var(--text)}
+.toggle-row .tr-text{flex:1;min-width:0}
+.toggle-row .tr-title{font-weight:700;font-size:.9rem;letter-spacing:-.01em;margin-bottom:.15rem}
+.toggle-row .tr-desc{color:var(--muted);font-size:.78rem;line-height:1.45}
+.switch{flex-shrink:0;width:48px;height:28px;border-radius:999px;background:var(--surface-2);border:1px solid var(--border);position:relative;cursor:pointer;transition:all .2s}
+.switch .knob{position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:var(--muted);transition:all .2s}
+.switch.on{background:var(--text);border-color:var(--text)}
+body.dark-mode .switch.on{background:var(--accent);border-color:var(--accent)}
+.switch.on .knob{left:23px;background:var(--bg)}
+body.dark-mode .switch.on .knob{background:#0a0a0a}
+.settings-section{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.5rem;margin-bottom:1rem}
+.settings-section h3{font-size:1.2rem;font-weight:900;margin:0 0 1.25rem;letter-spacing:-.02em}
+.settings-sub{color:var(--muted);font-size:.82rem;margin-bottom:1.25rem}
+.seg-tabs{display:flex;gap:.3rem;margin-bottom:1.25rem;background:var(--surface-2);padding:.3rem;border-radius:var(--r-pill);overflow-x:auto}
+.seg-tabs .seg-tab{flex:1;min-width:70px;padding:.55rem .85rem;border-radius:var(--r-pill);border:none;background:transparent;color:var(--muted);font-weight:600;font-size:.78rem;cursor:pointer;font-family:inherit;transition:all .2s;white-space:nowrap}
+.seg-tabs .seg-tab.active{background:var(--text);color:var(--bg)}
+body.dark-mode .seg-tabs .seg-tab.active{background:var(--accent);color:#0a0a0a}
+.save-bar{display:flex;justify-content:flex-end;gap:.6rem;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+.overlay-screen{position:fixed;inset:0;background:var(--bg);z-index:3000;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem}
+.spinner{width:44px;height:44px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin 1s linear infinite}
+.admin-layout{display:grid;grid-template-columns:220px 1fr;gap:1rem}
+@media(max-width:768px){.admin-layout{grid-template-columns:1fr}}
+.admin-sidebar{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:.75rem;height:fit-content;position:sticky;top:90px}
+@media(max-width:768px){.admin-sidebar{position:static;display:flex;overflow-x:auto;gap:.35rem;padding:.5rem}}
+.admin-tab{display:flex;align-items:center;gap:.6rem;width:100%;padding:.7rem 1rem;margin-bottom:.25rem;border:none;background:transparent;color:var(--muted);font-weight:600;font-size:.85rem;cursor:pointer;border-radius:var(--r-md);transition:all .2s;font-family:inherit;text-align:left;white-space:nowrap}
+@media(max-width:768px){.admin-tab{margin-bottom:0;padding:.55rem .85rem}}
+.admin-tab:hover{background:var(--surface-2);color:var(--text)}
+.admin-tab.active{background:var(--text);color:var(--bg)}
+body.dark-mode .admin-tab.active{background:var(--accent);color:#0a0a0a}
+.admin-main{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.75rem;min-height:400px}
+.admin-section-head{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--border)}
+.admin-section-head h3{font-size:1.15rem;font-weight:800;margin:0;letter-spacing:-.02em}
+.admin-section-actions{display:flex;gap:.4rem}
+.admin-list-item{padding:.75rem;margin-bottom:.5rem;background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-md);display:flex}
+.admin-list-item-row{display:flex;gap:.5rem;align-items:center;width:100%;flex-wrap:wrap}
+.admin-list-item-row .form-input{flex:1;min-width:100px;padding:.5rem .7rem;font-size:.82rem}
+.admin-list-item-row .btn-danger{flex-shrink:0}
+/* OTP VERIFICATION */
+.otp-box{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:2rem 1.75rem;max-width:420px;margin:0 auto;box-shadow:var(--shadow-md);text-align:center}
+.otp-icon{width:64px;height:64px;border-radius:16px;background:var(--accent);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:1.75rem}
+.otp-title{font-size:1.15rem;font-weight:800;margin-bottom:.4rem;letter-spacing:-.02em}
+.otp-desc{color:var(--muted);font-size:.82rem;line-height:1.5;margin-bottom:1.5rem}
+.otp-input{width:100%;text-align:center;font-family:'JetBrains Mono',monospace;font-size:1.75rem;letter-spacing:.5rem;padding:1rem;background:var(--surface-2);border:1.5px solid var(--border);border-radius:var(--r-md);color:var(--text);transition:all .2s}
+.otp-input:focus{outline:none;border-color:var(--accent);background:var(--surface)}
+.otp-input.shake{animation:shake .4s}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+.otp-timer{text-align:center;margin-top:1rem;color:var(--muted);font-size:.78rem}
+.otp-timer .cd{color:var(--text);font-weight:700;font-family:'JetBrains Mono',monospace}
+.otp-actions{display:flex;gap:.5rem;margin-top:1rem;flex-wrap:wrap}
+.otp-actions .btn-outline,.otp-actions .btn-primary{flex:1;justify-content:center;min-width:140px}
+</style>
+</head>
+<body>
+
+<div class="overlay-screen" id="bootScreen">
+  <div class="spinner"></div>
+  <div style="color:var(--muted);font-size:.85rem;font-weight:500;">Menghubungkan ke Firebase...</div>
+</div>
+
+<div class="top-nav" id="topNav" style="display:none;">
+  <div class="top-nav-inner">
+    <div style="display:flex;align-items:center;gap:.75rem;">
+      <button class="back-btn mobile-only" id="backBtn" onclick="goBack()" style="display:none;">←</button>
+      <a class="brand" onclick="navigate('home')"><span class="brand-icon">H</span> HunzAi-O51W</a>
+    </div>
+    <div class="nav-links desktop-only">
+      <a onclick="navigate('home')" data-nav="home">Beranda</a>
+      <a onclick="navigate('dashboard')" data-nav="dashboard">Dashboard</a>
+      <a onclick="navigate('bots')" data-nav="bots">Bot Saya</a>
+      <a onclick="navigate('terminal')" data-nav="terminal">Terminal</a>
+      <a onclick="navigate('profile')" data-nav="profile">Profil</a>
+      <a onclick="navigate('settings')" data-nav="settings">Pengaturan</a>
+      <a onclick="navigate('feedback')" data-nav="feedback">Feedback</a>
+      <button class="nav-icon-btn" onclick="toggleTheme()" style="margin-left:.5rem;">🌙</button>
+      <button class="btn-primary btn-sm" id="navAuthBtn" onclick="handleNavAuth()" style="margin-left:.4rem;">Masuk →</button>
+    </div>
+    <div class="mobile-only" style="display:flex;align-items:center;gap:.5rem;">
+      <button class="nav-icon-btn" onclick="toggleTheme()" style="width:34px;height:34px;font-size:.9rem;">🌙</button>
+      <div class="avatar-mini" id="navAvatar" onclick="openProfileMenu()" style="display:none;">?<span class="online-dot"></span></div>
+      <button class="btn-primary btn-sm" id="navAuthBtnMobile" onclick="handleNavAuth()" style="padding:.4rem .9rem;font-size:.78rem;">Masuk</button>
+    </div>
+  </div>
+</div>
+
+<div id="app"></div>
+
+<div class="bottom-nav" id="bottomNav" style="display:none;">
+  <button class="bnav-item" data-bnav="home" onclick="navigate('home')"><span class="ico">🏠</span><span>Home</span></button>
+  <button class="bnav-item" data-bnav="dashboard" onclick="navigate('dashboard')"><span class="ico">📊</span><span>Dashboard</span></button>
+  <button class="bnav-item" data-bnav="bots" onclick="navigate('bots')"><span class="ico">🤖</span><span>Bot</span></button>
+  <button class="bnav-item" data-bnav="profile" onclick="navigate('profile')"><span class="ico">👤</span><span>Profil</span></button>
+  <button class="bnav-item" onclick="openSheet()"><span class="ico">☰</span><span>Menu</span></button>
+</div>
+
+<div class="sheet-overlay" id="sheetOverlay" onclick="closeSheet()"></div>
+<div class="bottom-sheet" id="sheet">
+  <div class="sheet-handle"></div>
+  <div class="sheet-title">Menu</div>
+  <div class="sheet-grid" id="sheetGrid">
+    <button class="sheet-item" onclick="sheetNav('dashboard')"><span class="ico">📊</span><span>Dashboard</span></button>
+    <button class="sheet-item" onclick="sheetNav('bots')"><span class="ico">🤖</span><span>Bot Saya</span></button>
+    <button class="sheet-item" onclick="sheetNav('terminal')"><span class="ico">💻</span><span>Terminal</span></button>
+    <button class="sheet-item" onclick="sheetNav('profile')"><span class="ico">👤</span><span>Profil</span></button>
+    <button class="sheet-item" onclick="sheetNav('settings')"><span class="ico">⚙️</span><span>Pengaturan</span></button>
+    <button class="sheet-item" onclick="sheetNav('feedback')"><span class="ico">💬</span><span>Feedback</span></button>
+    <button class="sheet-item" onclick="sheetNav('pricing')"><span class="ico">💰</span><span>Harga</span></button>
+    <button class="sheet-item" onclick="sheetNav('features')"><span class="ico">✨</span><span>Fitur</span></button>
+    <button class="sheet-item" onclick="sheetNav('faq')"><span class="ico">❓</span><span>FAQ</span></button>
+    <button class="sheet-item danger" onclick="handleLogout()" id="sheetLogoutBtn" style="display:none;"><span class="ico">🚪</span><span>Logout</span></button>
+  </div>
+</div>
+
+<div class="profile-menu-overlay" id="profileMenuOverlay" onclick="closeProfileMenu()"></div>
+<div class="profile-menu" id="profileMenu"></div>
+
+<div class="modal-overlay" id="modal"><div class="modal-box" id="modalBox"></div></div>
+<div class="toast" id="toast"></div>
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-analytics.js";
+import {
+  getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword,
+  signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged,
+  updateProfile, sendPasswordResetEmail
+} from "https://www.gstatic.com/firebasejs/12.18.0/firebase-auth.js";
+import {
+  getFirestore, collection, doc, addDoc, getDoc, getDocs, setDoc,
+  updateDoc, deleteDoc, query, orderBy, limit, serverTimestamp
+} from "https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAJFzhiJg0Y1DfH_gRo98yqTtEfYaqwcUE",
+  authDomain: "bisnis-portofolioku.firebaseapp.com",
+  projectId: "bisnis-portofolioku",
+  storageBucket: "bisnis-portofolioku.firebasestorage.app",
+  messagingSenderId: "1029563186618",
+  appId: "1:1029563186618:web:becdad570d537dfe31f183",
+  measurementId: "G-QSWMG667YC"
+};
+
+const app = initializeApp(firebaseConfig);
+try { getAnalytics(app); } catch(e) {}
+const auth = getAuth(app);
+const db = getFirestore(app);
+const googleProvider = new GoogleAuthProvider();
+googleProvider.setCustomParameters({ prompt: 'select_account' });
+
+const ADMIN_EMAIL = 'mumumimi353@gmail.com';
+const ADMIN_PASSWORD = 'Kampoeng51';
+
+/* ============================================================
+   ⚙️ EMAILJS CONFIG — GANTI DENGAN ID ANDA!
+   Dapatkan dari: https://dashboard.emailjs.com/
+   ============================================================ */
+const EMAILJS_CONFIG = {
+  publicKey: 'GANTI_DENGAN_PUBLIC_KEY_ANDA',    // Account → General → Public Key
+  serviceId: 'GANTI_DENGAN_SERVICE_ID_ANDA',    // Email Services → Service ID
+  templateId: 'GANTI_DENGAN_TEMPLATE_ID_ANDA',  // Email Templates → Template ID
+  fromEmail: 'wrjnbot@gmail.com',
+  fromName: 'HunzAi-O51W'
+};
+
+// Initialize EmailJS
+if (typeof emailjs !== 'undefined') {
+  emailjs.init({ publicKey: EMAILJS_CONFIG.publicKey });
+}
+
+/* ============ STATE ============ */
+const State = {
+  currentPage: 'home', history: [], user: null, firebaseUser: null,
+  theme: 'light', wizard: { step: 1, method: 'pairing', data: {} },
+  regEmail: null  // ← email yang sedang verifikasi
+};
+let adminActiveTab = 'branding';
+
+/* ============ DEFAULT CONTENT ============ */
+const DEFAULT_CONTENT = {
+  branding: { brandName: 'HunzAi-O51W', brandIcon: 'H', tagline: 'AI Agent untuk Bisnis Anda', themeColor: '#c5ff41', metaTitle: 'HunzAi-O51W — AI Agent untuk Bisnis Anda', metaDescription: 'Platform WhatsApp Gateway AI Agent untuk bisnis modern.' },
+  navbar: { links: [ { label:'Beranda', page:'home' }, { label:'Dashboard', page:'dashboard' }, { label:'Bot Saya', page:'bots' }, { label:'Terminal', page:'terminal' }, { label:'Profil', page:'profile' }, { label:'Pengaturan', page:'settings' }, { label:'Feedback', page:'feedback' } ], ctaLabel: 'Masuk →', ctaPage: 'login' },
+  hero: { badge: 'Terhubung Firebase · Cloud Firestore', badgeActive: true, title: 'HunzAi-O51W', titleHighlight: 'AI agent untuk Bisnis anda', description: 'Platform WhatsApp Gateway AI Agent untuk kebutuhan komunikasi bisnis modern. Kelola bot WhatsApp Anda dari satu dashboard.', primaryBtn: 'Mulai Sekarang →', primaryBtnPage: 'login', secondaryBtn: 'Lihat Harga', secondaryBtnTarget: 'pricing' },
+  stats: { title: 'Statistik', subtitle: 'Data nyata dari Firebase Cloud Firestore.', items: [ { icon:'👥', value:'—', label:'Pengguna', meta:'Terdaftar', dynamic:'users' }, { icon:'🤖', value:'—', label:'Bot', meta:'Sistem', dynamic:'bots' }, { icon:'🔒', value:'Firebase', label:'Keamanan', meta:'Firebase Auth', dynamic:null }, { icon:'☁️', value:'Real-time', label:'Cloud', meta:'Firestore', dynamic:null } ] },
+  pricing: { title: 'Pricing', subtitle: 'Mulai gratis, upgrade saat kebutuhan berkembang.', plans: [
+    { name:'Free', desc:'Untuk coba-coba', price:'Gratis', period:'Life Time', featured:false, features:['1 Nomor Owner','Life Time Respons','Termasuk Iklan','Support Komunitas'], disabled:['Webhook','Priority Support'] },
+    { name:'Core', desc:'Untuk personal', price:'10K', period:'15 Hari', featured:false, features:['2 Nomor Owner','20K Respons','Tanpa Iklan','Support Email'], disabled:['Webhook','Priority Support'] },
+    { name:'Plus', desc:'Untuk UMKM', price:'20K', period:'30 Hari', featured:false, features:['3 Nomor Owner','60K Respons','Tanpa Iklan','Support Email'], disabled:['Priority Support'] },
+    { name:'Pro', desc:'Paling populer', price:'35K', period:'30 Hari', featured:true, features:['5 Nomor Owner','150K Respons','Tanpa Iklan','Webhook','Priority Support'], disabled:[] },
+    { name:'Elite', desc:'Untuk bisnis', price:'65K', period:'60 Hari', featured:false, features:['10 Nomor Owner','400K Respons','Tanpa Iklan','Webhook','Priority Support'], disabled:[] },
+    { name:'Infinity', desc:'Untuk enterprise', price:'125K', period:'360 Hari', featured:false, features:['20 Nomor Owner','1M Respons','Tanpa Iklan','Webhook','Priority Support','SLA 99.9%'], disabled:[] }
+  ]},
+  features: { title: 'Fitur', subtitle: 'Dibangun dengan teknologi modern.', items: [
+    { icon:'🔥', title:'Firebase Auth', desc:'Autentikasi aman dengan Firebase + Google OAuth.' },
+    { icon:'📧', title:'Email Verification', desc:'Verifikasi email 2-langkah dengan kode 6-digit.' },
+    { icon:'☁️', title:'Cloud Firestore', desc:'Database real-time yang tersinkronisasi antar perangkat.' },
+    { icon:'🤖', title:'Multi Bot', desc:'Kelola banyak bot WhatsApp dari satu akun.' },
+    { icon:'🔑', title:'API Key Unik', desc:'Setiap bot punya API key untuk integrasi.' },
+    { icon:'📊', title:'Real-time Sync', desc:'Update langsung via onSnapshot Firestore.' }
+  ]},
+  faq: { title: 'Pertanyaan Umum', subtitle: 'Seputar bot WhatsApp & layanan HunzAi-O51W', items: [
+    { q:'Apa itu HunzAi-O51W?', a:'HunzAi-O51W adalah platform WhatsApp Gateway AI Agent untuk mengelola bot WhatsApp secara otomatis.' },
+    { q:'Bagaimana cara membuat bot pertama?', a:'Setelah login ke dashboard, ikuti wizard 4 langkah untuk membuat bot WhatsApp pertama Anda.' },
+    { q:'Metode koneksi apa saja?', a:'Tersedia Kode Pairing (8 digit) dan Scan QR Code.' },
+    { q:'Apakah bot bisa auto-reply dengan AI?', a:'Ya, bot dilengkapi Chatbot AI dengan provider Groq, Gemini, Cloudflare, atau 9Router.' },
+    { q:'Berapa banyak bot per akun?', a:'Tergantung paket: Free (1), Core (2), Plus (3), Pro (5), Elite (10), Infinity (20).' }
+  ]},
+  cta: { enabled: true, title: "Let's make things happen", description: 'Hubungi kami untuk memulai. Aktifkan bot WhatsApp Anda dalam hitungan menit.', buttonLabel: 'Get your free proposal →', buttonPage: 'login', background: 'accent' },
+  footer: { description: 'Platform integrasi WhatsApp Gateway AI Agent.', columns: [
+    { title:'Navigasi', links:[{label:'Beranda',page:'home'},{label:'Dashboard',page:'dashboard'},{label:'Profil',page:'profile'},{label:'Pengaturan',page:'settings'}] },
+    { title:'Akun', links:[{label:'Bot Saya',page:'bots'},{label:'Terminal',page:'terminal'},{label:'Feedback',page:'feedback'}] }
+  ], copyright: `© ${new Date().getFullYear()} HunzAi-O51W. Made with ❤️ in Indonesia` }
+};
+
+let SITE = JSON.parse(JSON.stringify(DEFAULT_CONTENT));
+
+/* ============ HELPERS ============ */
+const generateCustomId = () => String(600000 + Math.floor(Math.random() * 99999));
+const generateApiKey = () => {
+  const bytes = crypto.getRandomValues(new Uint8Array(24));
+  return 'hz_live_' + Array.from(bytes, b => b.toString(16).padStart(2, '0')).join('');
+};
+const escHtml = s => String(s).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+const isAdmin = () => State.user && State.user.role === 'Administrator';
+
+function showToast(msg, type = 'success') {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.style.background = type === 'error' ? 'var(--danger)' : '';
+  t.classList.add('show');
+  clearTimeout(window._tt);
+  window._tt = setTimeout(() => t.classList.remove('show'), 3200);
+}
+function showModal(html) { document.getElementById('modalBox').innerHTML = html; document.getElementById('modal').classList.add('show'); }
+function closeModal() { document.getElementById('modal').classList.remove('show'); }
+document.getElementById('modal').addEventListener('click', e => { if (e.target.id === 'modal') closeModal(); });
+
+function formatTimeAgo(ts) {
+  if (!ts) return '-';
+  const date = ts.toDate ? ts.toDate() : new Date(ts);
+  const diff = Date.now() - date.getTime();
+  const s = Math.floor(diff / 1000);
+  if (s < 60) return 'Baru saja';
+  const m = Math.floor(s / 60);
+  if (m < 60) return `${m} menit lalu`;
+  const h = Math.floor(m / 60);
+  if (h < 24) return `${h} jam lalu`;
+  const d = Math.floor(h / 24);
+  if (d < 30) return `${d} hari lalu`;
+  return date.toLocaleDateString('id-ID');
+}
+function togglePassVisibility(id, btn) {
+  const el = document.getElementById(id); if (!el) return;
+  if (el.type === 'password') { el.type = 'text'; btn.textContent = '🙈'; }
+  else { el.type = 'password'; btn.textContent = '👁️'; }
+}
+function copyText(text, label) { navigator.clipboard.writeText(text).then(() => showToast(`✓ ${label} disalin`)).catch(() => showToast(`✓ ${text}`)); }
+function toggleFaq(i) { document.getElementById('faq' + i).classList.toggle('open'); }
+function openSheet() { document.getElementById('sheet').classList.add('show'); document.getElementById('sheetOverlay').classList.add('show'); document.body.style.overflow = 'hidden'; }
+function closeSheet() { document.getElementById('sheet').classList.remove('show'); document.getElementById('sheetOverlay').classList.remove('show'); document.body.style.overflow = ''; }
+function closeProfileMenu() { document.getElementById('profileMenu').classList.remove('show'); document.getElementById('profileMenuOverlay').classList.remove('show'); }
+function profileMenuNav(t) { closeProfileMenu(); setTimeout(() => navigate(t), 200); }
+
+/* ============================================================
+   EMAIL VERIFICATION SYSTEM
+   ============================================================ */
+const PENDING_REGISTRATIONS = new Map();
+const CODE_EXPIRY_MS = 10 * 60 * 1000;
+const RESEND_COOLDOWN_MS = 60 * 1000;
+const MAX_VERIFY_ATTEMPTS = 5;
+
+function generateVerificationCode() {
+  const arr = new Uint32Array(1);
+  crypto.getRandomValues(arr);
+  return String(100000 + (arr[0] % 900000));
+}
+async function hashVerificationCode(email, code) {
+  const data = new TextEncoder().encode(`${email.toLowerCase()}:${code}:hunzai_verify_2025_v1`);
+  const hash = await crypto.subtle.digest('SHA-256', data);
+  return Array.from(new Uint8Array(hash), b => b.toString(16).padStart(2, '0')).join('');
+}
+async function sendVerificationEmail(email, code, name) {
+  if (typeof emailjs === 'undefined') throw new Error('EmailJS belum dimuat. Cek koneksi internet.');
+  if (!EMAILJS_CONFIG.publicKey || EMAILJS_CONFIG.publicKey.startsWith('GANTI')) {
+    throw new Error('EmailJS belum dikonfigurasi. Hubungi admin.');
+  }
+  const templateParams = {
+    to_email: email,
+    to_name: name || email.split('@')[0],
+    verification_code: code,
+    brand_name: SITE?.branding?.brandName || 'HunzAi-O51W',
+    from_name: EMAILJS_CONFIG.fromName,
+    reply_to: EMAILJS_CONFIG.fromEmail,
+    expiry_minutes: 10
+  };
+  return await emailjs.send(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.templateId, templateParams, EMAILJS_CONFIG.publicKey);
+}
+async function startRegistration(email, password, name) {
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) throw new Error('Format email tidak valid');
+  if (password.length < 6) throw new Error('Password minimal 6 karakter');
+  if (!name || name.length < 2) throw new Error('Nama minimal 2 karakter');
+
+  // Cek apakah email sudah terdaftar di Firebase Auth (fetch sign-in methods)
+  try {
+    const existingUser = await fetch(`https://identitytoolkit.googleapis.com/v1/accounts:createAuthUri?key=${firebaseConfig.apiKey}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ identifier: email, continueUri: 'http://localhost' })
+    }).then(r => r.json());
+    if (existingUser.registered) throw new Error('Email sudah terdaftar. Silakan login.');
+  } catch (e) {
+    if (e.message.includes('sudah terdaftar')) throw e;
+    // Abaikan error lain (misal network), tetap lanjut
+  }
+
+  const code = generateVerificationCode();
+  const codeHash = await hashVerificationCode(email, code);
+
+  PENDING_REGISTRATIONS.set(email, {
+    codeHash, data: { name, password },
+    expiresAt: Date.now() + CODE_EXPIRY_MS,
+    attempts: 0, sentAt: Date.now()
+  });
+
+  try {
+    await sendVerificationEmail(email, code, name);
+    State.regEmail = email;
+    return { success: true };
+  } catch (err) {
+    PENDING_REGISTRATIONS.delete(email);
+    throw err;
+  }
+}
+async function verifyAndComplete(code) {
+  const email = State.regEmail;
+  if (!email) throw new Error('Sesi verifikasi tidak ditemukan');
+  const rec = PENDING_REGISTRATIONS.get(email);
+  if (!rec) throw new Error('Sesi verifikasi tidak ditemukan. Silakan daftar ulang.');
+  if (Date.now() > rec.expiresAt) {
+    PENDING_REGISTRATIONS.delete(email);
+    throw new Error('Kode sudah kedaluwarsa. Silakan kirim ulang.');
+  }
+  if (rec.attempts >= MAX_VERIFY_ATTEMPTS) {
+    PENDING_REGISTRATIONS.delete(email);
+    throw new Error('Terlalu banyak percobaan. Silakan daftar ulang.');
+  }
+  const inputHash = await hashVerificationCode(email, code);
+  if (inputHash !== rec.codeHash) {
+    rec.attempts++;
+    const remaining = MAX_VERIFY_ATTEMPTS - rec.attempts;
+    throw new Error(`Kode salah. Sisa ${remaining} percobaan.`);
+  }
+  try {
+    const user = await fbRegister(email, rec.data.password, rec.data.name);
+    PENDING_REGISTRATIONS.delete(email);
+    State.regEmail = null;
+    return user;
+  } catch (err) {
+    PENDING_REGISTRATIONS.delete(email);
+    State.regEmail = null;
+    throw err;
+  }
+}
+async function resendVerificationCode() {
+  const email = State.regEmail;
+  if (!email) throw new Error('Sesi verifikasi tidak ditemukan');
+  const rec = PENDING_REGISTRATIONS.get(email);
+  if (!rec) throw new Error('Sesi verifikasi tidak ditemukan');
+  const elapsed = Date.now() - rec.sentAt;
+  if (elapsed < RESEND_COOLDOWN_MS) {
+    const wait = Math.ceil((RESEND_COOLDOWN_MS - elapsed) / 1000);
+    throw new Error(`Tunggu ${wait} detik sebelum kirim ulang`);
+  }
+  const code = generateVerificationCode();
+  rec.codeHash = await hashVerificationCode(email, code);
+  rec.expiresAt = Date.now() + CODE_EXPIRY_MS;
+  rec.attempts = 0;
+  rec.sentAt = Date.now();
+  await sendVerificationEmail(email, code, rec.data.name);
+  return { success: true };
+}
+
+/* ============ VERIFICATION UI ============ */
+let verifyCountdownInterval = null;
+
+function renderRegisterVerify() {
+  const email = State.regEmail;
+  if (!email) return;
+  const rec = PENDING_REGISTRATIONS.get(email);
+  if (!rec) return;
+
+  const app = document.getElementById('app');
+  app.innerHTML = `
+    <div class="page-wrap">
+      <div class="login-hero">
+        <div class="login-hero-icon" style="background:var(--accent);">
+          <svg width="38" height="38" viewBox="0 0 24 24" fill="none">
+            <path d="M3 7l9 6 9-6M3 7v10a2 2 0 002 2h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2z" stroke="#0a0a0a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h2>Verifikasi <span class="highlight">Email</span> Anda</h2>
+        <p>Kode 6-digit telah dikirim. Silakan cek inbox dan folder Spam.</p>
+      </div>
+
+      <div class="otp-box">
+        <div class="otp-icon">📧</div>
+        <div class="otp-title">Cek Email Anda</div>
+        <div class="otp-desc">
+          Kami telah mengirim kode verifikasi ke<br>
+          <strong style="color:var(--text);word-break:break-all;">${email}</strong>
+        </div>
+
+        <form onsubmit="handleVerifySubmit(event)" id="verifyForm">
+          <div class="form-group">
+            <label style="text-align:center;display:block;">Kode Verifikasi</label>
+            <input type="text" class="otp-input" id="verifyCode"
+                   placeholder="000000" maxlength="6"
+                   inputmode="numeric" pattern="[0-9]{6}"
+                   autocomplete="one-time-code" required autofocus>
+            <div class="form-hint" style="text-align:center;">Kode berlaku 10 menit</div>
+          </div>
+
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:.85rem;" id="verifySubmitBtn">
+            Verifikasi & Daftar →
+          </button>
+        </form>
+
+        <div class="otp-timer">
+          Kode kedaluwarsa dalam <span class="cd" id="countdown">10:00</span>
+        </div>
+
+        <div class="otp-actions">
+          <button type="button" class="btn-outline btn-sm" onclick="handleResendCode(this)" id="resendBtn">
+            🔄 Kirim Ulang
+          </button>
+          <button type="button" class="btn-outline btn-sm" onclick="cancelVerification()">
+            ✏️ Ganti Email
+          </button>
+        </div>
+
+        <div style="margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid var(--border);font-size:.75rem;color:var(--muted);line-height:1.6;">
+          💡 <strong style="color:var(--text);">Tips:</strong> Jika email tidak masuk dalam 1 menit, cek folder <strong style="color:var(--text);">Spam</strong> atau <strong style="color:var(--text);">Promosi</strong>. Email dikirim dari <strong style="color:var(--text);">wrjnbot@gmail.com</strong>.
+        </div>
+      </div>
+    </div>
+  `;
+
+  setTimeout(() => document.getElementById('verifyCode')?.focus(), 150);
+  startVerifyCountdown();
+}
+
+function startVerifyCountdown() {
+  clearInterval(verifyCountdownInterval);
+  const el = document.getElementById('countdown');
+  if (!el) return;
+  const update = () => {
+    const rec = PENDING_REGISTRATIONS.get(State.regEmail);
+    if (!rec) { clearInterval(verifyCountdownInterval); return; }
+    const remaining = Math.max(0, rec.expiresAt - Date.now());
+    if (remaining === 0) {
+      clearInterval(verifyCountdownInterval);
+      el.textContent = '00:00';
+      el.style.color = 'var(--danger)';
+      return;
+    }
+    const m = Math.floor(remaining / 60000);
+    const s = Math.floor((remaining % 60000) / 1000);
+    el.textContent = `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+  };
+  update();
+  verifyCountdownInterval = setInterval(update, 1000);
+}
+
+async function handleVerifySubmit(e) {
+  e.preventDefault();
+  const btn = document.getElementById('verifySubmitBtn');
+  const input = document.getElementById('verifyCode');
+  const code = input.value.trim();
+  if (code.length !== 6 || !/^\d{6}$/.test(code)) {
+    showToast('⚠ Kode harus 6 digit angka', 'error');
+    input.classList.add('shake');
+    setTimeout(() => input.classList.remove('shake'), 400);
+    return;
+  }
+  const orig = btn.textContent;
+  btn.textContent = 'Memverifikasi...'; btn.disabled = true;
+  try {
+    await verifyAndComplete(code);
+    clearInterval(verifyCountdownInterval);
+    showToast('✓ Email terverifikasi! Akun berhasil dibuat.');
+    setTimeout(() => navigate('dashboard'), 700);
+  } catch (err) {
+    showToast('⚠ ' + err.message, 'error');
+    btn.textContent = orig; btn.disabled = false;
+    input.value = '';
+    input.focus();
+    input.classList.add('shake');
+    setTimeout(() => input.classList.remove('shake'), 400);
+  }
+}
+
+async function handleResendCode(btn) {
+  const orig = btn.textContent;
+  btn.textContent = 'Mengirim...'; btn.disabled = true;
+  try {
+    await resendVerificationCode();
+    showToast('✓ Kode baru telah dikirim');
+    startVerifyCountdown();
+  } catch (err) {
+    showToast('⚠ ' + err.message, 'error');
+  } finally {
+    setTimeout(() => { btn.textContent = orig; btn.disabled = false; }, 1000);
+  }
+}
+
+function cancelVerification() {
+  clearInterval(verifyCountdownInterval);
+  if (State.regEmail) PENDING_REGISTRATIONS.delete(State.regEmail);
+  State.regEmail = null;
+  navigate('register');
+}
+
+/* ============ SITE CONTENT FIRESTORE ============ */
+async function loadSiteContent() {
+  try {
+    const snap = await getDocs(collection(db, 'site_content'));
+    if (snap.empty) {
+      for (const [key, value] of Object.entries(DEFAULT_CONTENT)) await setDoc(doc(db, 'site_content', key), value);
+      SITE = JSON.parse(JSON.stringify(DEFAULT_CONTENT));
+    } else {
+      snap.docs.forEach(d => {
+        if (DEFAULT_CONTENT[d.id]) SITE[d.id] = { ...DEFAULT_CONTENT[d.id], ...d.data() };
+        else SITE[d.id] = d.data();
+      });
+    }
+    return SITE;
+  } catch (e) { console.warn('Load content error:', e); return DEFAULT_CONTENT; }
+}
+async function saveSiteSection(section, data) {
+  if (!isAdmin()) throw new Error('Hanya admin yang dapat mengubah');
+  await setDoc(doc(db, 'site_content', section), data);
+  SITE[section] = data;
+  await fbLogActivity(State.user.uid, 'Konten diupdate', `Section "${section}"`, '✏️');
+}
+async function resetSiteSection(section) {
+  if (!isAdmin()) throw new Error('Hanya admin');
+  await setDoc(doc(db, 'site_content', section), DEFAULT_CONTENT[section]);
+  SITE[section] = JSON.parse(JSON.stringify(DEFAULT_CONTENT[section]));
+  await fbLogActivity(State.user.uid, 'Konten direset', `Section "${section}"`, '🔄');
+}
+async function resetAllSiteContent() {
+  if (!isAdmin()) throw new Error('Hanya admin');
+  for (const [key, value] of Object.entries(DEFAULT_CONTENT)) await setDoc(doc(db, 'site_content', key), value);
+  SITE = JSON.parse(JSON.stringify(DEFAULT_CONTENT));
+  await fbLogActivity(State.user.uid, 'Semua direset', 'Konten ke default', '🔄');
+}
+
+/* ============ FIREBASE DATA ============ */
+async function fbGetUser(uid) {
+  const snap = await getDoc(doc(db, 'users', uid));
+  return snap.exists() ? { uid, ...snap.data() } : null;
+}
+async function fbCreateUserDoc(uid, data) {
+  await setDoc(doc(db, 'users', uid), {
+    email: data.email, userId: generateCustomId(), name: data.name,
+    handle: data.handle, role: data.role || 'User', badge: data.badge || '💎 FREE',
+    provider: data.provider, bio: 'Belum menambahkan bio.', avatar: data.avatar,
+    avatarImage: data.avatarImage || null,
+    avatarColor: data.avatarColor || 'linear-gradient(135deg,#c5ff41,#8fd41f)',
+    plan: data.plan || 'Free', planExpiry: null, apiKey: generateApiKey(),
+    timezone: 'Asia/Jakarta', language: 'id', twoFactor: false,
+    googleLinked: !!data.googleLinked, emailLinked: true, verified: !!data.verified,
+    createdAt: serverTimestamp(), lastLogin: serverTimestamp(), isOnline: true
+  });
+  await setDoc(doc(db, 'users', uid, 'settings', 'main'), { antiPrivateChat:false, antiSpam:true, autoDownload:true, alwaysOnline:true, multiPrefix:true, selfMode:false });
+  await setDoc(doc(db, 'users', uid, 'settings', 'chatbot'), { enabled:false, provider:'groq', apiKey:'', model:'compound', systemInstruction:'You are a helpful assistant.' });
+  await setDoc(doc(db, 'users', uid, 'settings', 'webhook'), { enabled:false, url:'', method:'POST' });
+}
+async function fbUpdateUser(uid, updates) { await updateDoc(doc(db, 'users', uid), updates); }
+async function fbLogActivity(uid, title, desc, icon='📝') {
+  try { await addDoc(collection(db, 'users', uid, 'activities'), { title, desc, icon, timestamp: serverTimestamp() }); } catch(e) {}
+}
+async function fbGetBots(uid) { const s = await getDocs(collection(db,'users',uid,'bots')); return s.docs.map(d=>({id:d.id,...d.data()})); }
+async function fbCreateBot(uid, data) {
+  const bot = { name:data.name, ownerPhone:data.ownerPhone, botPhone:data.botPhone, type:data.type||'Full Features', method:data.method||'pairing', status:'pending', apiKey:generateApiKey(), messagesSent:0, messagesReceived:0, createdAt:serverTimestamp(), connectedAt:null };
+  const ref = await addDoc(collection(db,'users',uid,'bots'), bot);
+  await fbLogActivity(uid, 'Bot dibuat', `Bot "${bot.name}"`, '🤖');
+  return { id: ref.id, ...bot };
+}
+async function fbDeleteBot(uid, botId) {
+  await deleteDoc(doc(db,'users',uid,'bots',botId));
+  await fbLogActivity(uid, 'Bot dihapus', 'Bot dihapus dari sistem', '🗑️');
+}
+async function fbGetActivities(uid, max=20) {
+  const q = query(collection(db,'users',uid,'activities'), orderBy('timestamp','desc'), limit(max));
+  const s = await getDocs(q);
+  return s.docs.map(d=>({id:d.id,...d.data()}));
+}
+async function fbGetSettings(uid) {
+  const [m,c,w] = await Promise.all([ getDoc(doc(db,'users',uid,'settings','main')), getDoc(doc(db,'users',uid,'settings','chatbot')), getDoc(doc(db,'users',uid,'settings','webhook')) ]);
+  return { main:m.exists()?m.data():{}, chatbot:c.exists()?c.data():{}, webhook:w.exists()?w.data():{} };
+}
+async function fbSaveSettings(uid, section, data) { await setDoc(doc(db,'users',uid,'settings',section), data, {merge:true}); }
+
+/* ============ AUTH ============ */
+function mapFirebaseError(code) {
+  return {
+    'auth/email-already-in-use': 'Email sudah terdaftar',
+    'auth/invalid-email': 'Format email tidak valid',
+    'auth/weak-password': 'Password minimal 6 karakter',
+    'auth/user-not-found': 'Email tidak terdaftar',
+    'auth/wrong-password': 'Password salah',
+    'auth/invalid-credential': 'Email atau password salah',
+    'auth/too-many-requests': 'Terlalu banyak percobaan',
+    'auth/popup-closed-by-user': 'Login Google dibatalkan',
+    'auth/network-request-failed': 'Koneksi internet bermasalah',
+    'auth/operation-not-allowed': 'Metode login belum diaktifkan di Firebase Console'
+  }[code] || null;
+}
+
+async function fbRegister(email, password, name) {
+  const cred = await createUserWithEmailAndPassword(auth, email, password);
+  await updateProfile(cred.user, { displayName: name });
+  const isAdminEmail = email.toLowerCase() === ADMIN_EMAIL;
+  await fbCreateUserDoc(cred.user.uid, {
+    email: email.toLowerCase(), name,
+    handle: '@' + email.split('@')[0].toLowerCase().replace(/[^a-z0-9]/g,''),
+    avatar: name.charAt(0).toUpperCase(), provider: '🔑 Email',
+    role: isAdminEmail ? 'Administrator' : 'User',
+    badge: isAdminEmail ? '👑 ADMIN' : '💎 FREE',
+    plan: isAdminEmail ? 'Infinity' : 'Free', verified: true
+  });
+  await fbLogActivity(cred.user.uid, 'Akun dibuat', 'Pendaftaran akun baru via email verification', '🆕');
+  return cred.user;
+}
+async function fbLogin(email, password) {
+  const cred = await signInWithEmailAndPassword(auth, email, password);
+  await fbUpdateUser(cred.user.uid, { lastLogin: serverTimestamp(), isOnline: true });
+  await fbLogActivity(cred.user.uid, 'Login berhasil', 'Login email & password', '🔓');
+  return cred.user;
+}
+async function fbLoginOrCreateAdmin(email, password) {
+  try { return await signInWithEmailAndPassword(auth, email, password); }
+  catch(err) {
+    if ((err.code === 'auth/user-not-found' || err.code === 'auth/invalid-credential')
+        && email.toLowerCase() === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
+      return await fbRegister(email, password, 'Administrator');
+    }
+    throw err;
+  }
+}
+async function fbLoginGoogle() {
+  const result = await signInWithPopup(auth, googleProvider);
+  const user = result.user;
+  const snap = await getDoc(doc(db, 'users', user.uid));
+  if (!snap.exists()) {
+    const isAdminEmail = user.email.toLowerCase() === ADMIN_EMAIL;
+    await fbCreateUserDoc(user.uid, {
+      email: user.email.toLowerCase(),
+      name: user.displayName || user.email.split('@')[0],
+      handle: '@' + user.email.split('@')[0].toLowerCase(),
+      avatar: (user.displayName || user.email[0]).charAt(0).toUpperCase(),
+      avatarImage: user.photoURL || null,
+      avatarColor: 'linear-gradient(135deg,#4285F4,#2563eb)',
+      provider: 'G Akun Google',
+      role: isAdminEmail ? 'Administrator' : 'User',
+      badge: isAdminEmail ? '👑 ADMIN' : '💎 FREE',
+      plan: isAdminEmail ? 'Infinity' : 'Free',
+      googleLinked: true, verified: true
+    });
+  } else {
+    await fbUpdateUser(user.uid, { lastLogin: serverTimestamp(), isOnline: true, googleLinked: true });
+  }
+  await fbLogActivity(user.uid, 'Login dengan Google', 'Login passwordless', '🔓');
+  return user;
+}
+async function fbLogout() {
+  if (auth.currentUser) {
+    try { await fbUpdateUser(auth.currentUser.uid, { isOnline: false }); await fbLogActivity(auth.currentUser.uid, 'Logout', 'Logout dari sistem', '🚪'); } catch(e) {}
+  }
+  await signOut(auth);
+}
+
+/* ============ NAV ============ */
+function navigate(page) {
+  if (State.currentPage !== page) State.history.push(State.currentPage);
+  State.currentPage = page;
+  window.location.hash = page;
+  render();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  closeSheet();
+}
+function goBack() {
+  if (State.history.length > 0) {
+    const prev = State.history.pop();
+    State.currentPage = prev; window.location.hash = prev; render();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else navigate('home');
+}
+function scrollToSection(id) {
+  if (State.currentPage !== 'home') { navigate('home'); setTimeout(() => { const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: 'smooth' }); }, 300); }
+  else { const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: 'smooth' }); }
+}
+function sheetNav(target) {
+  closeSheet();
+  setTimeout(() => {
+    if (['pricing','features','faq','stats'].includes(target)) scrollToSection(target);
+    else navigate(target);
+  }, 200);
+}
+function handleNavAuth() { navigate(State.user ? 'dashboard' : 'login'); }
+
+function updateAuthUI() {
+  const navBtn = document.getElementById('navAuthBtn');
+  const navBtnM = document.getElementById('navAuthBtnMobile');
+  const avatar = document.getElementById('navAvatar');
+  const sheetLogout = document.getElementById('sheetLogoutBtn');
+  const sheetGrid = document.getElementById('sheetGrid');
+  if (State.user) {
+    if (navBtn) navBtn.style.display = 'none';
+    if (navBtnM) navBtnM.style.display = 'none';
+    if (avatar) {
+      avatar.style.display = 'flex';
+      if (State.user.avatarImage) avatar.innerHTML = `<img src="${State.user.avatarImage}" alt="avatar"/><span class="online-dot"></span>`;
+      else avatar.innerHTML = `${State.user.avatar || '?'}<span class="online-dot"></span>`;
+    }
+    if (sheetLogout) sheetLogout.style.display = 'flex';
+    if (isAdmin() && sheetGrid && !document.getElementById('sheetAdminBtn')) {
+      const btn = document.createElement('button');
+      btn.id = 'sheetAdminBtn';
+      btn.className = 'sheet-item';
+      btn.innerHTML = '<span class="ico">⚙️</span><span>Admin</span>';
+      btn.onclick = () => sheetNav('admin');
+      btn.style.background = 'linear-gradient(135deg,rgba(197,255,65,.2),transparent)';
+      sheetGrid.insertBefore(btn, sheetGrid.firstChild);
+    }
+  } else {
+    if (navBtn) navBtn.style.display = 'inline-flex';
+    if (navBtnM) navBtnM.style.display = 'inline-flex';
+    if (avatar) avatar.style.display = 'none';
+    if (sheetLogout) sheetLogout.style.display = 'none';
+    const adminBtn = document.getElementById('sheetAdminBtn');
+    if (adminBtn) adminBtn.remove();
+  }
+}
+
+function toggleTheme() {
+  State.theme = State.theme === 'dark' ? 'light' : 'dark';
+  document.body.classList.toggle('dark-mode', State.theme === 'dark');
+  try { localStorage.setItem('hunzai_theme', State.theme); } catch(e) {}
+  document.querySelectorAll('.nav-icon-btn').forEach(btn => {
+    if (btn.textContent.trim() === '🌙' || btn.textContent.trim() === '☀️') btn.textContent = State.theme === 'dark' ? '☀️' : '🌙';
+  });
+  if (document.getElementById('profileMenu').classList.contains('show')) openProfileMenu();
+}
+
+function openProfileMenu() {
+  if (!State.user) { navigate('login'); return; }
+  const u = State.user;
+  const menu = document.getElementById('profileMenu');
+  const adminItem = isAdmin() ? `
+    <div class="pm-item" onclick="profileMenuNav('admin')" style="background:linear-gradient(135deg,rgba(197,255,65,.15),transparent);">
+      <div class="pm-icon" style="background:var(--accent);color:#0a0a0a;">⚙️</div>
+      <div class="pm-text"><div class="pm-title">Admin Panel</div><div class="pm-desc">Kelola konten website</div></div>
+    </div>` : '';
+  menu.innerHTML = `
+    <div class="profile-menu-header">
+      <div class="pm-avatar" style="background:${u.avatarImage ? 'transparent' : (u.avatarColor || 'var(--accent)')};">${u.avatarImage ? `<img src="${u.avatarImage}" alt="avatar"/>` : (u.avatar || '?')}</div>
+      <div class="pm-info"><div class="pm-name">${u.name}</div><div class="pm-handle">${u.handle}</div><div class="pm-status"><span class="dot ${u.isOnline ? '' : 'offline'}"></span>${u.isOnline ? 'Online' : 'Offline'}</div></div>
+      <span class="pm-badge">${u.badge}</span>
+    </div>
+    ${adminItem}
+    <div class="pm-item" onclick="profileMenuNav('profile')"><div class="pm-icon">👤</div><div class="pm-text"><div class="pm-title">Profil</div><div class="pm-desc">Informasi akun</div></div></div>
+    <div class="pm-item" onclick="profileMenuNav('settings')"><div class="pm-icon">⚙️</div><div class="pm-text"><div class="pm-title">Pengaturan</div><div class="pm-desc">Kelola akun & bot</div></div></div>
+    <div class="pm-item" onclick="profileMenuNav('bots')"><div class="pm-icon">🤖</div><div class="pm-text"><div class="pm-title">Bot Saya</div><div class="pm-desc">Kelola bot WhatsApp</div></div></div>
+    <div class="pm-item" onclick="profileMenuNav('dashboard')"><div class="pm-icon">📊</div><div class="pm-text"><div class="pm-title">Dashboard</div><div class="pm-desc">Ringkasan aktivitas</div></div></div>
+    <div class="pm-item" onclick="toggleTheme(); openProfileMenu();"><div class="pm-icon">🎨</div><div class="pm-text"><div class="pm-title">Theme</div></div><div class="pm-toggle ${State.theme === 'dark' ? 'on' : ''}"><div class="knob"></div></div></div>
+    <div class="pm-item danger" onclick="closeProfileMenu(); handleLogout();"><div class="pm-icon">🚪</div><div class="pm-text"><div class="pm-title">Logout</div></div></div>
+  `;
+  menu.classList.add('show');
+  document.getElementById('profileMenuOverlay').classList.add('show');
+}
+
+async function handleLogout() {
+  if (!confirm('Yakin ingin logout?')) return;
+  closeSheet(); closeProfileMenu();
+  try { await fbLogout(); showToast('✓ Berhasil logout'); setTimeout(() => navigate('home'), 400); }
+  catch (e) { showToast('⚠ ' + (mapFirebaseError(e.code) || e.message), 'error'); }
+}
+
+/* ============ ROUTER ============ */
+async function render() {
+  const app = document.getElementById('app');
+  const page = State.currentPage;
+  document.querySelectorAll('[data-nav]').forEach(el => el.classList.toggle('active', el.dataset.nav === page));
+  document.querySelectorAll('[data-bnav]').forEach(el => el.classList.toggle('active', el.dataset.bnav === page));
+  const backBtn = document.getElementById('backBtn');
+  if (backBtn) backBtn.style.display = (State.history.length > 0 && window.innerWidth < 992) ? 'block' : 'none';
+
+  // Intercept: kalau regEmail ada & page register → tampilkan verifikasi
+  if (State.regEmail && PENDING_REGISTRATIONS.has(State.regEmail) && (page === 'register' || page === 'login')) {
+    renderRegisterVerify();
+    updateAuthUI();
+    return;
+  }
+
+  try {
+    switch (page) {
+      case 'home': app.innerHTML = await renderHome(); break;
+      case 'login': app.innerHTML = renderLogin('login'); break;
+      case 'register': app.innerHTML = renderLogin('register'); break;
+      case 'dashboard': app.innerHTML = await renderDashboard(); break;
+      case 'bots': app.innerHTML = await renderBots(); break;
+      case 'terminal': app.innerHTML = renderTerminal(); break;
+      case 'profile': app.innerHTML = await renderProfile(); break;
+      case 'settings': app.innerHTML = await renderSettings(); break;
+      case 'feedback': app.innerHTML = renderFeedback(); break;
+      case 'admin': app.innerHTML = renderAdminPanel(); break;
+      default: app.innerHTML = await renderHome();
+    }
+  } catch (err) {
+    console.error(err);
+    app.innerHTML = `<div class="page-wrap"><div class="card" style="max-width:480px;margin:3rem auto;text-align:center;padding:2rem;"><div style="font-size:2rem;margin-bottom:.75rem;">⚠️</div><div style="font-weight:800;margin-bottom:.4rem;">Terjadi kesalahan</div><div style="color:var(--muted);font-size:.85rem;">${err.message}</div></div></div>`;
+  }
+  if (page === 'terminal') initTerminal();
+  updateAuthUI();
+  document.querySelectorAll('.nav-icon-btn').forEach(btn => {
+    if (btn.textContent.trim() === '🌙' || btn.textContent.trim() === '☀️') btn.textContent = State.theme === 'dark' ? '☀️' : '🌙';
+  });
+  if (page === 'home') setTimeout(loadHomeStats, 100);
+}
+
+/* ============ HOME ============ */
+async function renderHome() {
+  const hero = SITE.hero, stats = SITE.stats, pricing = SITE.pricing;
+  const features = SITE.features, faq = SITE.faq, cta = SITE.cta;
+  const footer = SITE.footer, branding = SITE.branding;
+
+  const adminBtn = isAdmin() ? `
+    <button onclick="navigate('admin')" style="position:fixed;bottom:96px;right:16px;z-index:999;background:var(--accent);color:#0a0a0a;border:none;padding:.7rem 1.2rem;border-radius:999px;font-weight:700;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.2);font-family:inherit;font-size:.85rem;display:flex;align-items:center;gap:.4rem;" title="Edit Website">
+      ⚙️ Edit Website
+    </button>` : '';
+
+  return `
+  <div class="page-wrap">
+    ${adminBtn}
+    <div class="hero">
+      ${hero.badgeActive ? `<div class="fb-status"><span class="status-dot"></span> ${hero.badge}</div>` : ''}
+      <h1>${hero.title}<br><span class="highlight">${hero.titleHighlight}</span></h1>
+      <p>${hero.description}</p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="navigate('${State.user ? 'dashboard' : hero.primaryBtnPage}')">${State.user && hero.primaryBtn === 'Mulai Sekarang →' ? 'Buka Dashboard →' : hero.primaryBtn}</button>
+        <button class="btn-outline" onclick="scrollToSection('${hero.secondaryBtnTarget}')">${hero.secondaryBtn}</button>
+      </div>
+    </div>
+
+    <section class="section" id="stats">
+      <div style="display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap;">
+        <span class="hl">${stats.title}</span>
+        <p style="color:var(--muted);font-size:.9rem;max-width:400px;margin:0;line-height:1.5;">${stats.subtitle}</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;">
+        ${stats.items.map(s => `
+          <div class="stat-box">
+            <div class="stat-bg">${s.icon}</div>
+            <div class="stat-num" ${s.dynamic ? `id="stat${s.dynamic.charAt(0).toUpperCase()+s.dynamic.slice(1)}"` : ''}>${s.value}</div>
+            <div class="stat-lbl">${s.label}</div>
+            <div class="stat-row"><span>${s.meta}</span><span>→</span></div>
+          </div>`).join('')}
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div style="display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap;">
+        <span class="hl">${pricing.title}</span>
+        <p style="color:var(--muted);font-size:.9rem;max-width:400px;margin:0;line-height:1.5;">${pricing.subtitle}</p>
+      </div>
+      <div class="pricing-grid">
+        ${pricing.plans.map(p => `
+          <div class="price-card ${p.featured ? 'featured' : ''}">
+            ${p.featured ? '<div class="pop-badge">Populer</div>' : ''}
+            <div class="price-name">${p.name}</div>
+            <div class="price-desc">${p.desc}</div>
+            <div class="price-num">${p.price !== 'Gratis' ? '<span class="cur">IDR</span>' : ''}${p.price}</div>
+            <div class="price-period">${p.period}</div>
+            <ul class="price-feats">${p.features.map(f=>`<li>${f}</li>`).join('')}${(p.disabled||[]).map(f=>`<li class="dim">${f}</li>`).join('')}</ul>
+            <button class="${p.featured?'btn-accent':'btn-primary'}" onclick="selectPlan('${p.name}')" style="width:100%;justify-content:center;">${p.price==='Gratis'?'Mulai Gratis →':'Pilih Paket →'}</button>
+          </div>`).join('')}
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div style="display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap;">
+        <span class="hl">${features.title}</span>
+        <p style="color:var(--muted);font-size:.9rem;max-width:400px;margin:0;line-height:1.5;">${features.subtitle}</p>
+      </div>
+      <div class="feat-grid">
+        ${features.items.map(f => `<div class="feat-box"><div class="feat-icon">${f.icon}</div><h3>${f.title}</h3><p>${f.desc}</p></div>`).join('')}
+      </div>
+    </section>
+
+    ${cta.enabled ? `
+    <section class="section">
+      <div style="background:${cta.background === 'accent' ? 'var(--accent)' : 'var(--surface-dark)'};border-radius:var(--r-lg);padding:2.5rem 1.75rem;text-align:center;">
+        <h3 style="font-size:clamp(1.3rem,3.5vw,1.8rem);margin-bottom:.5rem;color:${cta.background === 'accent' ? '#0a0a0a' : 'var(--text-on-dark)'};">${cta.title}</h3>
+        <p style="color:${cta.background === 'accent' ? '#0a0a0a' : 'var(--muted-on-dark)'};opacity:.75;font-size:.9rem;max-width:460px;margin:0 auto 1.5rem;line-height:1.6;">${cta.description}</p>
+        <button class="btn-primary" onclick="navigate('${cta.buttonPage}')" style="background:${cta.background === 'accent' ? '#0a0a0a' : 'var(--accent)'};color:${cta.background === 'accent' ? '#fff' : '#0a0a0a'};">${cta.buttonLabel}</button>
+      </div>
+    </section>` : ''}
+
+    <section class="section" id="faq">
+      <div class="section-title">${faq.title.split(' ').slice(0,-1).join(' ')} <span class="highlight">${faq.title.split(' ').slice(-1)[0]}</span></div>
+      <p class="section-sub">${faq.subtitle}</p>
+      <div style="max-width:700px;margin:0 auto;">
+        ${faq.items.map((f,i) => `
+          <div class="faq-item" id="faq${i}">
+            <button class="faq-q" onclick="toggleFaq(${i})"><span>${f.q}</span><span class="arrow">▾</span></button>
+            <div class="faq-a">${f.a}</div>
+          </div>`).join('')}
+      </div>
+    </section>
+
+    <footer style="border-top:1px solid var(--border);padding:2.5rem 0 1.5rem;margin-top:2rem;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;">
+        <div>
+          <div style="font-weight:900;font-size:1.2rem;margin-bottom:.6rem;display:flex;align-items:center;gap:.5rem;">
+            <span class="brand-icon">${branding.brandIcon}</span> ${branding.brandName}
+          </div>
+          <p style="color:var(--muted);font-size:.85rem;max-width:280px;line-height:1.6;">${footer.description}</p>
+        </div>
+        ${footer.columns.map(col => `
+          <div>
+            <div style="font-weight:800;font-size:.9rem;margin-bottom:.75rem;">${col.title}</div>
+            <div style="display:flex;flex-direction:column;gap:.45rem;">
+              ${col.links.map(l => `<a onclick="navigate('${l.page}')" style="color:var(--muted);font-size:.85rem;cursor:pointer;">${l.label}</a>`).join('')}
+            </div>
+          </div>`).join('')}
+      </div>
+      <div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.25rem;text-align:center;color:var(--muted);font-size:.8rem;">${footer.copyright}</div>
+    </footer>
+  </div>`;
+}
+
+async function loadHomeStats() {
+  try {
+    const usersSnap = await getDocs(collection(db, 'users'));
+    const elU = document.getElementById('statUsers');
+    if (elU) elU.textContent = usersSnap.size;
+    let totalBots = 0;
+    const limitSnap = await getDocs(query(collection(db, 'users'), limit(50)));
+    for (const u of limitSnap.docs) {
+      const botsSnap = await getDocs(collection(db, 'users', u.id, 'bots'));
+      totalBots += botsSnap.size;
+    }
+    const elB = document.getElementById('statBots');
+    if (elB) elB.textContent = totalBots;
+  } catch(e) { console.warn('Stats error', e); }
+}
+
+function selectPlan(plan) {
+  if (plan === 'Free') { navigate(State.user ? 'dashboard' : 'register'); return; }
+  showModal(`<div class="modal-head"><h3>Pilih Paket ${plan}</h3><button class="modal-close" onclick="closeModal()">×</button></div><p style="color:var(--muted);font-size:.88rem;margin-bottom:1.25rem;">Untuk melanjutkan ke paket ${plan}, silakan ${State.user ? 'buka dashboard untuk upgrade' : 'daftar akun terlebih dahulu'}.</p><div style="display:flex;gap:.5rem;"><button class="btn-primary" style="flex:1;justify-content:center;" onclick="closeModal();navigate('${State.user ? 'dashboard' : 'register'}')">${State.user ? 'Buka Dashboard' : 'Daftar'}</button><button class="btn-outline" style="flex:1;justify-content:center;" onclick="closeModal()">Batal</button></div>`);
+}
+
+/* ============ LOGIN ============ */
+function renderLogin(mode = 'login') {
+  const isReg = mode === 'register';
+  return `
+  <div class="page-wrap">
+    <div class="login-hero">
+      <div class="login-hero-icon"><svg width="38" height="38" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="#0a0a0a" stroke-width="1.8"/><path d="M7 9h10M7 13h6" stroke="#0a0a0a" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+      <h2>Ruang <span class="highlight">Kendali</span> HunzAi</h2>
+      <p>${isReg ? 'Buat akun baru dengan verifikasi email.' : 'Masuk untuk mengelola bot WhatsApp Anda.'}</p>
+    </div>
+    <div class="login-box">
+      <div class="login-tabs">
+        <button class="login-tab ${!isReg?'active':''}" onclick="navigate('login')">Masuk</button>
+        <button class="login-tab ${isReg?'active':''}" onclick="navigate('register')">Daftar</button>
+      </div>
+      ${isReg ? `
+        <div style="background:rgba(37,99,235,.08);border:1px solid rgba(37,99,235,.2);border-radius:12px;padding:.75rem .9rem;margin-bottom:1rem;display:flex;gap:.6rem;font-size:.78rem;line-height:1.5;">
+          <span style="flex-shrink:0;">📧</span>
+          <span>Kode verifikasi 6-digit akan dikirim ke email Anda setelah mengisi form.</span>
+        </div>
+      ` : ''}
+      <form onsubmit="handleAuthSubmit(event, '${isReg?'register':'login'}')">
+        ${isReg ? `<div class="form-group"><label>Nama Lengkap</label><input type="text" class="form-input" id="authName" placeholder="John Doe" required minlength="2"></div>` : ''}
+        <div class="form-group"><label>Email</label><input type="email" class="form-input" id="authEmail" placeholder="nama@email.com" required autocomplete="email"></div>
+        <div class="form-group"><label>Password</label><div class="pass-wrap"><input type="password" class="form-input" id="authPassword" placeholder="••••••••" required minlength="${isReg?6:1}"><button type="button" class="eye-btn" onclick="togglePassVisibility('authPassword', this)">👁️</button></div>${isReg?'<div class="form-hint">Minimal 6 karakter</div>':''}</div>
+        <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:.85rem;" id="authSubmitBtn">${isReg?'Kirim Kode Verifikasi →':'Masuk →'}</button>
+      </form>
+      <div class="divider-text">atau</div>
+      <button class="btn-google" onclick="handleGoogleLogin()"><svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>Login dengan Google</button>
+      ${!isReg ? `<div style="text-align:center;margin-top:1rem;"><a onclick="showForgotPassword()" style="color:var(--muted);font-size:.82rem;cursor:pointer;text-decoration:none;">Lupa password?</a></div>` : ''}
+    </div>
+  </div>`;
+}
+
+async function handleAuthSubmit(e, mode) {
+  e.preventDefault();
+  const btn = document.getElementById('authSubmitBtn');
+  const email = document.getElementById('authEmail').value.trim().toLowerCase();
+  const password = document.getElementById('authPassword').value;
+  const name = document.getElementById('authName')?.value.trim() || '';
+  const orig = btn.textContent;
+  btn.textContent = 'Memproses...'; btn.disabled = true;
+
+  try {
+    if (mode === 'register') {
+      btn.textContent = 'Mengirim kode...';
+      await startRegistration(email, password, name);
+      showToast('✓ Kode verifikasi dikirim ke email Anda');
+      render(); // tampilkan halaman verifikasi
+    } else {
+      if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) await fbLoginOrCreateAdmin(email, password);
+      else await fbLogin(email, password);
+      showToast('✓ Login berhasil!');
+      setTimeout(() => navigate('dashboard'), 500);
+    }
+  } catch (err) {
+    const msg = err.text || mapFirebaseError(err.code) || err.message || 'Terjadi kesalahan';
+    showToast('⚠ ' + msg, 'error');
+    btn.textContent = orig; btn.disabled = false;
+  }
+}
+async function handleGoogleLogin() {
+  try { await fbLoginGoogle(); showToast('✓ Login dengan Google berhasil'); setTimeout(() => navigate('dashboard'), 500); }
+  catch (err) { showToast('⚠ ' + (mapFirebaseError(err.code) || err.message), 'error'); }
+}
+function showForgotPassword() {
+  showModal(`<div class="modal-head"><h3>Reset Password</h3><button class="modal-close" onclick="closeModal()">×</button></div><p style="color:var(--muted);font-size:.85rem;margin-bottom:1.25rem;">Masukkan email Anda untuk menerima link reset.</p><div class="form-group"><label>Email</label><input type="email" class="form-input" id="resetEmail" placeholder="nama@email.com"></div><div style="display:flex;gap:.5rem;"><button class="btn-primary" style="flex:1;justify-content:center;" onclick="submitForgotPassword()">Kirim</button><button class="btn-outline" style="flex:1;justify-content:center;" onclick="closeModal()">Batal</button></div>`);
+}
+async function submitForgotPassword() {
+  const email = document.getElementById('resetEmail').value.trim();
+  if (!email) { showToast('⚠ Masukkan email', 'error'); return; }
+  try { await sendPasswordResetEmail(auth, email); showToast('✓ Link reset dikirim'); closeModal(); }
+  catch (e) { showToast('⚠ ' + (mapFirebaseError(e.code) || e.message), 'error'); }
+}
+
+/* ============ DASHBOARD ============ */
+async function renderDashboard() {
+  if (!State.user) return renderAuthRequired();
+  const uid = State.user.uid;
+  const bots = await fbGetBots(uid);
+  if (bots.length === 0) return renderWizard();
+  const activities = await fbGetActivities(uid, 5);
+  const u = State.user;
+  return `
+  <div class="page-wrap">
+    <div class="card profile-card" style="margin-bottom:1rem;">
+      <div class="profile-avatar-wrap">
+        ${u.avatarImage ? `<img src="${u.avatarImage}" class="profile-avatar" alt="avatar"/>` : `<div class="profile-avatar" style="background:${u.avatarColor || 'var(--accent)'};color:#0a0a0a;">${u.avatar}</div>`}
+        <label class="profile-edit" style="cursor:pointer;">✏️<input type="file" accept="image/*" style="display:none;" onchange="handleAvatarUpload(this)"></label>
+        <div class="profile-online" style="background:${u.isOnline?'var(--success)':'var(--muted)'};"></div>
+      </div>
+      <div style="display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin-bottom:.5rem;align-items:center;">
+        <span style="color:var(--muted);font-size:.85rem;font-weight:500;">Selamat Datang,</span>
+        <span class="badge green">${u.badge}</span>
+        <span class="badge blue">${u.provider}</span>
+      </div>
+      <div class="profile-name">${u.name} ${u.verified?'<span class="profile-verified">✓</span>':''}</div>
+      <div class="profile-handle">${u.handle}</div>
+      <div class="profile-tags"><span class="badge">✉️ ${u.email}</span><span class="badge" onclick="copyText('${u.userId}','User ID')" style="cursor:pointer;">🆔 ${u.userId} 📋</span></div>
+      <div class="badge green" style="display:inline-block;margin-top:.25rem;">🛡️ ${u.role}</div>
+      <div class="profile-bio">"${u.bio || 'Belum menambahkan bio.'}"</div>
+      <div class="profile-actions">
+        <button class="btn-outline btn-sm" onclick="copyText('${u.userId}','User ID')">📋 Salin ID</button>
+        <button class="btn-outline btn-sm" onclick="navigate('profile')">👤 Profil Lengkap</button>
+        <button class="btn-primary btn-sm" onclick="openEditProfile()">✏️ Edit Profil</button>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.75rem;margin-bottom:1.25rem;">
+      <div class="stat-box"><div class="stat-bg">🤖</div><div class="stat-num">${bots.length}</div><div class="stat-lbl">Bot Anda</div><div class="stat-row"><span>${bots.filter(b=>b.status==='connected').length} terhubung</span><span>→</span></div></div>
+      <div class="stat-box"><div class="stat-bg">💭</div><div class="stat-num">${bots.reduce((s,b)=>s+(b.messagesSent||0)+(b.messagesReceived||0),0)}</div><div class="stat-lbl">Total Pesan</div><div class="stat-row"><span>Semua bot</span><span>→</span></div></div>
+      <div class="stat-box"><div class="stat-bg">📝</div><div class="stat-num">${(await fbGetActivities(uid, 999)).length}</div><div class="stat-lbl">Aktivitas</div><div class="stat-row"><span>Tercatat</span><span>→</span></div></div>
+      <div class="stat-box"><div class="stat-bg">☁️</div><div class="stat-num">Live</div><div class="stat-lbl">Firestore</div><div class="stat-row"><span>Real-time</span><span>→</span></div></div>
+    </div>
+
+    <div class="section-h">🤖 Bot Anda</div>
+    <div id="dashboardBotsList">${bots.map(renderBotCard).join('')}</div>
+
+    <div class="section-h" style="margin-top:2rem;">🕐 Aktivitas Terbaru</div>
+    <div id="dashboardActivitiesList">${activities.length === 0 ? `<div class="card"><div class="empty-state"><div class="ico">📭</div>Belum ada aktivitas.</div></div>` : activities.map(renderActivityCard).join('')}</div>
+  </div>`;
+}
+
+function renderBotCard(b) {
+  return `
+  <div class="bot-card">
+    <div class="bot-head">
+      <span class="bot-name">${b.name}</span>
+      <span class="status-pill ${b.status==='connected'?'on':b.status==='pending'?'warn':'off'}">● ${b.status==='connected'?'Terhubung':b.status==='pending'?'Menunggu':'Terputus'}</span>
+      <span class="badge">${b.type}</span>
+    </div>
+    <div class="bot-phone">📱 ${b.botPhone}</div>
+    <div class="bot-meta"><div><span>Owner:</span> <strong>${b.ownerPhone}</strong></div><div><span>Metode:</span> <strong>${b.method}</strong></div></div>
+    <div class="bot-actions">
+      <button class="btn-outline btn-xs" onclick="copyText('${b.apiKey}','API Key')">🔑 API Key</button>
+      <button class="btn-outline btn-xs" onclick="viewBotDetail('${b.id}')">📋 Detail</button>
+      <button class="btn-danger btn-xs" onclick="confirmDeleteBot('${b.id}','${(b.name||'').replace(/'/g,"\\'")}')">🗑️ Hapus</button>
+    </div>
+  </div>`;
+}
+function renderActivityCard(a) {
+  return `<div class="activity-card"><div class="act-head"><div class="act-icon">${a.icon||'📝'}</div><div class="act-body"><div class="act-top"><div class="act-title">${a.title}</div><div class="act-time">${formatTimeAgo(a.timestamp)}</div></div><div class="act-desc">${a.desc}</div></div></div></div>`;
+}
+function renderAuthRequired() {
+  return `<div class="page-wrap"><div style="max-width:440px;margin:3rem auto;text-align:center;"><div class="card" style="padding:2.5rem 1.5rem;"><div style="font-size:3rem;margin-bottom:1rem;">🔒</div><h2 style="font-size:1.3rem;margin-bottom:.5rem;">Akses Dibatasi</h2><p style="color:var(--muted);font-size:.88rem;margin-bottom:1.5rem;">Login terlebih dahulu.</p><button class="btn-primary" onclick="navigate('login')">Masuk →</button></div></div></div>`;
+}
+
+/* ============ WIZARD ============ */
+function renderWizard() {
+  const w = State.wizard;
+  let content = '';
+  if (w.step === 1) content = `<div class="wiz-icon">🤖</div><div class="wiz-title">Buat Bot WhatsApp Pertama</div><div class="wiz-desc">Anda belum memiliki bot. Buat sekarang.</div><div class="wiz-checklist"><div class="wiz-ci"><span class="chk">✓</span> Siapkan nomor WhatsApp</div><div class="wiz-ci"><span class="chk">✓</span> Siapkan nama & nomor owner</div><div class="wiz-ci"><span class="chk">✓</span> Pilih metode pairing atau QR</div></div><div class="wiz-actions" style="justify-content:flex-end;"><button class="wiz-next" onclick="wizardNext()">Mulai →</button></div>`;
+  else if (w.step === 2) content = `<div class="form-group"><label>Nama Bot</label><input type="text" class="form-input" id="wizName" placeholder="Contoh: Bot Toko Saya" value="${w.data.name||''}"></div><div class="form-group"><label>Nama Owner</label><input type="text" class="form-input" id="wizOwnerName" placeholder="Nama pengelola" value="${w.data.ownerName||''}"></div><div class="form-group"><label>Nomor WhatsApp Owner</label><input type="tel" class="form-input" id="wizOwnerPhone" placeholder="6289512345678" value="${w.data.ownerPhone||''}"></div><div class="wiz-actions"><button class="wiz-back" onclick="wizardPrev()">← Kembali</button><button class="wiz-next" onclick="wizardNext()">Lanjut →</button></div>`;
+  else if (w.step === 3) content = `<div class="form-group"><label>Nomor WhatsApp Bot</label><input type="tel" class="form-input" id="wizBotPhone" placeholder="6281234567890" value="${w.data.botPhone||''}"></div><div class="form-group"><label>Metode</label><div class="wiz-toggle-grp"><button class="wiz-toggle ${w.method==='pairing'?'active':''}" onclick="wizardSetMethod('pairing',this)">📟 Kode Pairing</button><button class="wiz-toggle ${w.method==='qr'?'active':''}" onclick="wizardSetMethod('qr',this)">🔳 QR Code</button></div></div><div class="wiz-actions"><button class="wiz-back" onclick="wizardPrev()">← Kembali</button><button class="wiz-next" onclick="wizardNext()">Lanjut →</button></div>`;
+  else if (w.step === 4) content = `<div class="form-group"><label>Tipe Bot</label><select class="form-input" id="wizType"><option>Full Features</option><option>Games Only</option><option>Store Only</option></select></div><div class="wiz-info"><span>🔌</span><span>Data akan disimpan ke Cloud Firestore.</span></div><div class="wiz-actions"><button class="wiz-back" onclick="wizardPrev()">← Kembali</button><button class="wiz-next" onclick="wizardCreate()" id="wizCreateBtn">Buat Bot →</button></div>`;
+  return `<div class="page-wrap"><div class="wizard-wrap"><div class="wiz-steps">${[1,2,3,4].map(n => `<div class="wiz-step ${w.step>n?'done':''} ${w.step===n?'active':''}">${w.step>n?'✓':n}</div>${n<4?`<div class="wiz-line ${w.step>n?'done':''}"></div>`:''}`).join('')}</div>${content}</div></div>`;
+}
+function wizardNext() {
+  const w = State.wizard;
+  if (w.step === 2) {
+    const n = document.getElementById('wizName').value.trim();
+    const on = document.getElementById('wizOwnerName').value.trim();
+    const op = document.getElementById('wizOwnerPhone').value.trim();
+    if (!n || !on || !op) { showToast('⚠ Lengkapi semua field', 'error'); return; }
+    w.data.name = n; w.data.ownerName = on; w.data.ownerPhone = op;
+  }
+  if (w.step === 3) {
+    const bp = document.getElementById('wizBotPhone').value.trim();
+    if (!bp || bp.length < 8) { showToast('⚠ Nomor tidak valid', 'error'); return; }
+    w.data.botPhone = bp;
+  }
+  if (w.step < 4) { w.step++; render(); }
+}
+function wizardPrev() { if (State.wizard.step > 1) { State.wizard.step--; render(); } }
+function wizardSetMethod(m, el) { State.wizard.method = m; document.querySelectorAll('.wiz-toggle').forEach(b => b.classList.remove('active')); el.classList.add('active'); }
+async function wizardCreate() {
+  const btn = document.getElementById('wizCreateBtn');
+  const type = document.getElementById('wizType').value;
+  btn.textContent = 'Membuat...'; btn.disabled = true;
+  try {
+    await fbCreateBot(State.user.uid, { ...State.wizard.data, type, method: State.wizard.method });
+    showToast('✓ Bot berhasil dibuat!');
+    State.wizard = { step: 1, method: 'pairing', data: {} };
+    setTimeout(() => render(), 600);
+  } catch (err) { showToast('⚠ ' + err.message, 'error'); btn.textContent = 'Buat Bot →'; btn.disabled = false; }
+}
+
+/* ============ BOTS ============ */
+async function renderBots() {
+  if (!State.user) return renderAuthRequired();
+  const bots = await fbGetBots(State.user.uid);
+  return `
+  <div class="page-wrap">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem;">
+      <div><h1 style="font-size:1.5rem;margin-bottom:.4rem;">🤖 Bot Saya</h1><p style="color:var(--muted);font-size:.9rem;">Kelola semua bot WhatsApp Anda.</p></div>
+      <button class="btn-primary" onclick="createNewBot()">+ Buat Bot Baru</button>
+    </div>
+    ${bots.length === 0 ? `<div class="card"><div class="empty-state"><div class="ico">🤖</div><div style="font-weight:600;margin-bottom:.5rem;">Belum ada bot</div><button class="btn-primary btn-sm" onclick="createNewBot()">Buat Bot Pertama</button></div></div>` : bots.map(renderBotCard).join('')}
+  </div>`;
+}
+function createNewBot() { State.wizard = { step:1, method:'pairing', data:{} }; navigate('dashboard'); }
+async function viewBotDetail(id) {
+  const snap = await getDoc(doc(db,'users',State.user.uid,'bots',id));
+  if (!snap.exists()) { showToast('⚠ Bot tidak ditemukan', 'error'); return; }
+  const bot = { id: snap.id, ...snap.data() };
+  showModal(`
+    <div class="modal-head"><h3>${bot.name}</h3><button class="modal-close" onclick="closeModal()">×</button></div>
+    <div class="sys-row"><span class="lbl">Bot ID</span><span class="val" onclick="copyText('${bot.id}','Bot ID')" style="cursor:pointer;">${bot.id.substring(0,12)}... 📋</span></div>
+    <div class="sys-row"><span class="lbl">Status</span><span class="val">${bot.status}</span></div>
+    <div class="sys-row"><span class="lbl">Nomor Bot</span><span class="val">${bot.botPhone}</span></div>
+    <div class="sys-row"><span class="lbl">Nomor Owner</span><span class="val">${bot.ownerPhone}</span></div>
+    <div class="sys-row"><span class="lbl">Tipe</span><span class="val">${bot.type}</span></div>
+    <div style="margin-top:1rem;"><label style="font-size:.82rem;font-weight:600;display:block;margin-bottom:.4rem;">API Key</label><div style="display:flex;gap:.5rem;"><input type="text" class="form-input" value="${bot.apiKey}" readonly style="font-family:'JetBrains Mono',monospace;font-size:.75rem;"><button class="btn-primary btn-sm" onclick="copyText('${bot.apiKey}','API Key')">📋</button></div></div>
+    <div style="display:flex;gap:.5rem;margin-top:1.25rem;"><button class="btn-outline" style="flex:1;justify-content:center;" onclick="closeModal()">Tutup</button><button class="btn-danger" style="flex:1;justify-content:center;" onclick="closeModal();confirmDeleteBot('${bot.id}','${(bot.name||'').replace(/'/g,"\\'")}')">Hapus Bot</button></div>
+  `);
+}
+function confirmDeleteBot(id, name) {
+  showModal(`<div class="modal-head"><h3 style="color:var(--danger);">⚠️ Hapus Bot</h3><button class="modal-close" onclick="closeModal()">×</button></div><p style="color:var(--muted);font-size:.9rem;margin-bottom:1.25rem;">Bot <strong>${name}</strong> akan dihapus permanen.</p><div style="display:flex;gap:.5rem;"><button class="btn-outline" style="flex:1;justify-content:center;" onclick="closeModal()">Batal</button><button class="btn-primary" style="flex:1;justify-content:center;background:var(--danger);color:#fff;" onclick="doDeleteBot('${id}')">Ya, Hapus</button></div>`);
+}
+async function doDeleteBot(id) {
+  try { await fbDeleteBot(State.user.uid, id); closeModal(); showToast('✓ Bot dihapus'); render(); }
+  catch (err) { showToast('⚠ ' + err.message, 'error'); }
+}
+
+/* ============ TERMINAL ============ */
+function renderTerminal() {
+  if (!State.user) return renderAuthRequired();
+  return `
+  <div class="page-wrap">
+    <h1 style="font-size:1.5rem;margin-bottom:.4rem;">💻 Terminal</h1>
+    <p style="color:var(--muted);font-size:.9rem;margin-bottom:1.5rem;">Terminal interaktif untuk akun Anda.</p>
+    <div class="terminal">
+      <div class="term-head"><span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span><span class="term-title">hunzai@${State.user.email.split('@')[0]}:~</span></div>
+      <div class="term-body" id="termBody">
+        <div class="term-line"><span class="t-succ">HunzAi Terminal v2.4.1</span></div>
+        <div class="term-line"><span class="t-out">Selamat datang, ${State.user.name}!</span></div>
+        <div class="term-line"><span class="t-out">Ketik </span><span class="t-cmd">help</span><span class="t-out"> untuk daftar perintah.</span></div>
+        <div class="term-line">&nbsp;</div>
+      </div>
+      <div class="term-input"><span class="t-prompt">$</span><input type="text" id="termInput" placeholder="Ketik perintah..." autocomplete="off"></div>
+    </div>
+  </div>`;
+}
+function initTerminal() {
+  const input = document.getElementById('termInput'); if (!input) return;
+  input.focus();
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') { const cmd = input.value.trim(); if (!cmd) return; input.value = ''; runCommand(cmd); } });
+}
+async function runCommand(cmd) {
+  const body = document.getElementById('termBody'); if (!body) return;
+  const c = cmd.toLowerCase().trim();
+  const echo = document.createElement('div'); echo.className = 'term-line';
+  echo.innerHTML = `<span class="t-prompt">$</span> <span class="t-cmd">${escHtml(cmd)}</span>`; body.appendChild(echo);
+  const out = document.createElement('div'); out.className = 'term-line';
+  if (c === 'help') out.innerHTML = `<span class="t-out">Perintah:</span><br><span class="t-succ">  help</span><span class="t-out">      Daftar perintah</span><br><span class="t-succ">  whoami</span><span class="t-out">    Info akun</span><br><span class="t-succ">  bots</span><span class="t-out">      Daftar bot</span><br><span class="t-succ">  activity</span><span class="t-out">  Aktivitas terbaru</span><br><span class="t-succ">  apikey</span><span class="t-out">    API key</span><br><span class="t-succ">  clear</span><span class="t-out">     Bersihkan</span>`;
+  else if (c === 'whoami') out.innerHTML = `<span class="t-out">  Nama     : ${State.user.name}</span><br><span class="t-out">  Email    : ${State.user.email}</span><br><span class="t-out">  User ID  : ${State.user.userId}</span><br><span class="t-out">  Role     : ${State.user.role}</span>`;
+  else if (c === 'bots') { const bots = await fbGetBots(State.user.uid); out.innerHTML = bots.length === 0 ? '<span class="t-out">Belum ada bot.</span>' : bots.map(b => `<span class="t-succ">  ${b.name}</span><span class="t-out">  · ${b.botPhone}  · ${b.status}</span>`).join('<br>'); }
+  else if (c === 'activity') { const acts = await fbGetActivities(State.user.uid, 5); out.innerHTML = acts.length === 0 ? '<span class="t-out">Belum ada.</span>' : acts.map(a => `<span class="t-out">  ${a.icon} ${a.title} · ${formatTimeAgo(a.timestamp)}</span>`).join('<br>'); }
+  else if (c === 'apikey') out.innerHTML = `<span class="t-succ">${State.user.apiKey}</span>`;
+  else if (c === 'clear') { body.innerHTML = ''; return; }
+  else if (c === '') return;
+  else out.innerHTML = `<span class="t-err">Perintah tidak dikenal: ${escHtml(cmd)}. Ketik 'help'.</span>`;
+  body.appendChild(out); body.appendChild(document.createElement('div')).innerHTML = '&nbsp;';
+  body.scrollTop = body.scrollHeight;
+}
+
+/* ============ PROFILE ============ */
+async function renderProfile() {
+  if (!State.user) return renderAuthRequired();
+  const u = State.user;
+  const bots = await fbGetBots(u.uid);
+  const activities = await fbGetActivities(u.uid, 999);
+  const joinedDate = u.createdAt ? (u.createdAt.toDate ? u.createdAt.toDate() : new Date(u.createdAt)).toLocaleDateString('id-ID', { day:'numeric', month:'long', year:'numeric' }) : '-';
+  const lastLoginDate = u.lastLogin ? (u.lastLogin.toDate ? u.lastLogin.toDate() : new Date(u.lastLogin)).toLocaleString('id-ID', { day:'numeric', month:'short', hour:'2-digit', minute:'2-digit' }) : 'Baru saja';
+  return `
+  <div class="page-wrap">
+    <div class="card" style="text-align:center;padding:2.5rem 1.5rem;margin-bottom:1rem;">
+      <div class="profile-avatar-wrap" style="margin-bottom:1rem;">
+        ${u.avatarImage ? `<img src="${u.avatarImage}" class="profile-avatar" alt="avatar"/>` : `<div class="profile-avatar" style="background:${u.avatarColor || 'var(--accent)'};color:#0a0a0a;">${u.avatar}</div>`}
+        <label class="profile-edit" style="cursor:pointer;">✏️<input type="file" accept="image/*" style="display:none;" onchange="handleAvatarUpload(this)"></label>
+        <div class="profile-online" style="background:${u.isOnline?'var(--success)':'var(--muted)'};"></div>
+      </div>
+      <div style="display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin-bottom:.75rem;">
+        <span class="badge green">${u.badge}</span>
+        <span class="badge blue">${u.provider}</span>
+        ${u.verified ? '<span class="badge green">✓ Terverifikasi</span>' : ''}
+      </div>
+      <h1 style="font-size:2rem;margin:0 0 .25rem;letter-spacing:-.03em;">${u.name}</h1>
+      <div style="color:var(--muted);font-size:.9rem;font-weight:500;margin-bottom:1rem;">${u.handle}</div>
+      <p style="color:var(--muted);font-size:.9rem;font-style:italic;max-width:420px;margin:0 auto 1.5rem;line-height:1.6;">"${u.bio || 'Belum menambahkan bio.'}"</p>
+      <div style="display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;">
+        <button class="btn-outline btn-sm" onclick="copyText('${u.userId}','User ID')">📋 Salin ID</button>
+        <button class="btn-primary btn-sm" onclick="openEditProfile()">✏️ Edit Profil</button>
+        ${u.avatarImage ? `<button class="btn-outline btn-sm" onclick="removeAvatar()">🗑️ Hapus Avatar</button>` : ''}
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.75rem;margin-bottom:1.25rem;">
+      <div class="stat-box" style="padding:1.25rem;"><div class="stat-bg">🤖</div><div class="stat-num" style="font-size:2rem;">${bots.length}</div><div class="stat-lbl">Bot</div></div>
+      <div class="stat-box" style="padding:1.25rem;"><div class="stat-bg">💭</div><div class="stat-num" style="font-size:2rem;">${bots.reduce((s,b)=>s+(b.messagesSent||0)+(b.messagesReceived||0),0)}</div><div class="stat-lbl">Pesan</div></div>
+      <div class="stat-box" style="padding:1.25rem;"><div class="stat-bg">📝</div><div class="stat-num" style="font-size:2rem;">${activities.length}</div><div class="stat-lbl">Aktivitas</div></div>
+      <div class="stat-box" style="padding:1.25rem;"><div class="stat-bg">💎</div><div class="stat-num" style="font-size:1.3rem;padding-top:.4rem;">${u.plan}</div><div class="stat-lbl">Paket</div></div>
+    </div>
+    <div class="section-h">📋 Informasi Akun</div>
+    <div class="card" style="margin-bottom:1rem;">
+      <div class="sys-row"><span class="lbl">🆔 User ID</span><span class="val" onclick="copyText('${u.userId}','User ID')" style="cursor:pointer;">${u.userId} 📋</span></div>
+      <div class="sys-row"><span class="lbl">👤 Handle</span><span class="val">${u.handle}</span></div>
+      <div class="sys-row"><span class="lbl">✉️ Email</span><span class="val" onclick="copyText('${u.email}','Email')" style="cursor:pointer;">${u.email} 📋</span></div>
+      <div class="sys-row"><span class="lbl">🛡️ Role</span><span class="val">${u.role}</span></div>
+      <div class="sys-row"><span class="lbl">🌍 Timezone</span><span class="val">${u.timezone || 'Asia/Jakarta'}</span></div>
+      <div class="sys-row"><span class="lbl">G Google Linked</span><span class="val" style="color:${u.googleLinked?'var(--success)':'var(--muted)'};">${u.googleLinked?'✓ Terhubung':'○ Tidak'}</span></div>
+    </div>
+    <div class="section-h">🔑 API Key Akun</div>
+    <div class="card" style="margin-bottom:1rem;">
+      <div class="form-group" style="margin-bottom:0;">
+        <label>API Key Utama</label>
+        <div style="display:flex;gap:.5rem;"><input type="password" class="form-input" value="${u.apiKey}" readonly id="apiKeyField" style="font-family:'JetBrains Mono',monospace;font-size:.78rem;"><button class="btn-outline btn-sm" onclick="toggleApiVisibility()" id="apiKeyToggleBtn" style="flex-shrink:0;">👁️</button><button class="btn-primary btn-sm" onclick="copyText('${u.apiKey}','API Key')" style="flex-shrink:0;">📋</button></div>
+      </div>
+    </div>
+    <div class="section-h">📅 Timeline Akun</div>
+    <div class="card" style="margin-bottom:1rem;">
+      <div class="tl-item"><div class="tl-dot">🆕</div><div><div style="font-weight:700;font-size:.9rem;">Bergabung</div><div style="color:var(--muted);font-size:.82rem;">${joinedDate}</div></div></div>
+      <div class="tl-line"></div>
+      <div class="tl-item"><div class="tl-dot">🔑</div><div><div style="font-weight:700;font-size:.9rem;">Login Terakhir</div><div style="color:var(--muted);font-size:.82rem;">${lastLoginDate}</div></div></div>
+      <div class="tl-line"></div>
+      <div class="tl-item"><div class="tl-dot">🤖</div><div><div style="font-weight:700;font-size:.9rem;">Bot Terdaftar</div><div style="color:var(--muted);font-size:.82rem;">${bots.length} bot</div></div></div>
+    </div>
+    <div class="section-h" style="color:var(--danger);">⚠️ Zona Bahaya</div>
+    <div class="card" style="border-color:rgba(220,38,38,.3);margin-bottom:1rem;">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+        <div><div style="font-weight:700;font-size:.9rem;">Hapus Akun</div><div style="color:var(--muted);font-size:.82rem;">Data akan dihapus permanen.</div></div>
+        <button class="btn-danger btn-sm" onclick="confirmDeleteAccount()">🗑️ Hapus Akun</button>
+      </div>
+    </div>
+  </div>`;
+}
+function toggleApiVisibility() {
+  const f = document.getElementById('apiKeyField'), b = document.getElementById('apiKeyToggleBtn');
+  if (!f) return;
+  if (f.type === 'password') { f.type = 'text'; b.textContent = '🙈'; }
+  else { f.type = 'password'; b.textContent = '👁️'; }
+}
+function openEditProfile() {
+  const u = State.user;
+  showModal(`<div class="modal-head"><h3>Edit Profil</h3><button class="modal-close" onclick="closeModal()">×</button></div><div class="form-group"><label>Nama Lengkap</label><input type="text" class="form-input" id="editName" value="${u.name}"></div><div class="form-group"><label>Handle</label><input type="text" class="form-input" id="editHandle" value="${u.handle}"></div><div class="form-group"><label>Bio</label><textarea class="form-input" id="editBio" rows="3" style="resize:vertical;font-family:inherit;">${u.bio || ''}</textarea></div><div style="display:flex;gap:.5rem;"><button class="btn-primary" style="flex:1;justify-content:center;" onclick="saveProfile()">💾 Simpan</button><button class="btn-outline" style="flex:1;justify-content:center;" onclick="closeModal()">Batal</button></div>`);
+}
+async function saveProfile() {
+  const name = document.getElementById('editName').value.trim();
+  const handle = document.getElementById('editHandle').value.trim();
+  const bio = document.getElementById('editBio').value.trim();
+  if (!name || !handle) { showToast('⚠ Nama & handle wajib', 'error'); return; }
+  try {
+    await fbUpdateUser(State.user.uid, { name, handle: handle.startsWith('@')?handle:'@'+handle, bio: bio || 'Belum menambahkan bio.', avatar: name.charAt(0).toUpperCase() });
+    await fbLogActivity(State.user.uid, 'Profil diupdate', 'Profil diperbarui', '✏️');
+    State.user = await fbGetUser(State.user.uid);
+    closeModal(); showToast('✓ Profil disimpan'); updateAuthUI(); render();
+  } catch (e) { showToast('⚠ ' + e.message, 'error'); }
+}
+function handleAvatarUpload(input) {
+  const file = input.files && input.files[0]; if (!file) return;
+  if (!file.type.startsWith('image/')) { showToast('⚠ Harus gambar', 'error'); return; }
+  if (file.size > 2 * 1024 * 1024) { showToast('⚠ Max 2MB', 'error'); return; }
+  const reader = new FileReader();
+  reader.onload = async e => {
+    try {
+      await fbUpdateUser(State.user.uid, { avatarImage: e.target.result });
+      await fbLogActivity(State.user.uid, 'Avatar diupdate', 'Foto profil diperbarui', '🖼️');
+      State.user = await fbGetUser(State.user.uid);
+      showToast('✓ Avatar diupload'); updateAuthUI(); render();
+    } catch (err) { showToast('⚠ ' + err.message, 'error'); }
+  };
+  reader.readAsDataURL(file);
+}
+async function removeAvatar() {
+  try { await fbUpdateUser(State.user.uid, { avatarImage: null }); State.user = await fbGetUser(State.user.uid); showToast('✓ Avatar dihapus'); updateAuthUI(); render(); }
+  catch (e) { showToast('⚠ ' + e.message, 'error'); }
+}
+function confirmDeleteAccount() {
+  showModal(`<div class="modal-head"><h3 style="color:var(--danger);">⚠️ Hapus Akun</h3><button class="modal-close" onclick="closeModal()">×</button></div><p style="color:var(--muted);font-size:.9rem;margin-bottom:1.25rem;">Akun <strong>${State.user.email}</strong> akan dihapus permanen.</p><div style="display:flex;gap:.5rem;"><button class="btn-outline" style="flex:1;justify-content:center;" onclick="closeModal()">Batal</button><button class="btn-primary" style="flex:1;justify-content:center;background:var(--danger);color:#fff;" onclick="deleteAccount()">Ya, Hapus</button></div>`);
+}
+async function deleteAccount() {
+  try {
+    const uid = State.user.uid;
+    const bots = await fbGetBots(uid);
+    for (const b of bots) await deleteDoc(doc(db,'users',uid,'bots',b.id));
+    const acts = await fbGetActivities(uid, 999);
+    for (const a of acts) await deleteDoc(doc(db,'users',uid,'activities',a.id));
+    await deleteDoc(doc(db,'users',uid,'settings','main')).catch(()=>{});
+    await deleteDoc(doc(db,'users',uid,'settings','chatbot')).catch(()=>{});
+    await deleteDoc(doc(db,'users',uid,'settings','webhook')).catch(()=>{});
+    await deleteDoc(doc(db,'users',uid));
+    if (auth.currentUser) await auth.currentUser.delete();
+    closeModal();
+    showToast('✓ Akun dihapus');
+    setTimeout(() => navigate('home'), 600);
+  } catch (e) { showToast('⚠ ' + (e.code === 'auth/requires-recent-login' ? 'Login ulang untuk hapus akun' : e.message), 'error'); }
+}
+
+/* ============ SETTINGS ============ */
+async function renderSettings() {
+  if (!State.user) return renderAuthRequired();
+  const s = await fbGetSettings(State.user.uid);
+  const u = State.user;
+  return `
+  <div class="page-wrap">
+    <h1 style="font-size:1.5rem;margin-bottom:1.5rem;">⚙️ Pengaturan</h1>
+    <div class="settings-section">
+      <h3>Profil Akun</h3>
+      <div class="form-group"><label>Email</label><input type="email" class="form-input" value="${u.email}" readonly style="opacity:.7;cursor:not-allowed;"></div>
+      <div class="form-group"><label>Username</label><input type="text" class="form-input" id="settingsUsername" value="${(u.handle||'@').replace('@','')}"></div>
+      <div class="save-bar"><button class="btn-primary" onclick="saveUsername()">💾 Simpan</button></div>
+    </div>
+    <div class="settings-section">
+      <h3>Chatbot AI</h3>
+      <div class="toggle-row"><div class="tr-left"><div class="tr-text"><div class="tr-title">Enable Chatbot</div><div class="tr-desc">Aktifkan auto-reply AI.</div></div></div><div class="switch ${s.chatbot?.enabled?'on':''}" onclick="toggleChatbot(this)"><div class="knob"></div></div></div>
+      <div class="form-group" style="margin-top:1.25rem;"><label>AI Provider</label><div class="seg-tabs">${['Groq','Gemini','Cloudflare','9Router'].map(p => `<button class="seg-tab ${(s.chatbot?.provider||'groq').toLowerCase()===p.toLowerCase()?'active':''}" onclick="setProvider('${p.toLowerCase()}')">${p}</button>`).join('')}</div></div>
+      <div class="form-group"><label>API Key</label><input type="text" class="form-input" id="chatbotApiKey" value="${s.chatbot?.apiKey||''}" placeholder="gsk_..." style="font-family:'JetBrains Mono',monospace;font-size:.82rem;"></div>
+      <div class="form-group"><label>Model</label><select class="form-input" id="chatbotModel">${['Compound','Compound Mini','Llama 3.3 70B','Mixtral 8x7B','Gemma 2 9B'].map(m => `<option ${s.chatbot?.model===m?'selected':''}>${m}</option>`).join('')}</select></div>
+      <div class="form-group"><label>System Instruction</label><textarea class="form-input" id="chatbotSystem" rows="3" style="resize:vertical;font-family:inherit;">${s.chatbot?.systemInstruction||'You are a helpful assistant.'}</textarea></div>
+      <div class="save-bar"><button class="btn-primary" onclick="saveChatbotSettings()">💾 Simpan Chatbot</button></div>
+    </div>
+    <div class="settings-section">
+      <h3>Webhook</h3>
+      <div class="toggle-row"><div class="tr-left"><div class="tr-text"><div class="tr-title">Enable Webhook</div><div class="tr-desc">Kirim event ke URL.</div></div></div><div class="switch ${s.webhook?.enabled?'on':''}" onclick="toggleWebhook(this)"><div class="knob"></div></div></div>
+      <div class="form-group" style="margin-top:1.25rem;"><label>Webhook URL</label><input type="url" class="form-input" id="webhookUrl" value="${s.webhook?.url||''}" placeholder="https://example.com/webhook"></div>
+      <div class="form-group"><label>Method</label><select class="form-input" id="webhookMethod">${['POST','GET','PUT','PATCH'].map(m => `<option ${s.webhook?.method===m?'selected':''}>${m}</option>`).join('')}</select></div>
+      <div class="save-bar"><button class="btn-primary" onclick="saveWebhookSettings()">💾 Simpan Webhook</button></div>
+    </div>
+    <div class="settings-section">
+      <h3>Main Settings</h3>
+      <p class="settings-sub">Konfigurasi perilaku bot</p>
+      ${[
+        { key:'antiPrivateChat', icon:'🛡️', title:'Anti Private Chat', desc:'Tolak pesan private.' },
+        { key:'antiSpam', icon:'🚫', title:'Anti Spam', desc:'Batasi spam.' },
+        { key:'autoDownload', icon:'⬇️', title:'Auto Download', desc:'Auto download media.' },
+        { key:'alwaysOnline', icon:'📡', title:'Always Online', desc:'Selalu online.' },
+        { key:'multiPrefix', icon:'✳️', title:'Multi Prefix', desc:'Banyak awalan.' },
+        { key:'selfMode', icon:'👤', title:'Self Mode', desc:'Hanya owner.' }
+      ].map(row => `<div class="toggle-row"><div class="tr-left"><div class="tr-icon">${row.icon}</div><div class="tr-text"><div class="tr-title">${row.title}</div><div class="tr-desc">${row.desc}</div></div></div><div class="switch ${s.main?.[row.key]?'on':''}" onclick="toggleMainSetting('${row.key}', this)"><div class="knob"></div></div></div>`).join('')}
+    </div>
+  </div>`;
+}
+async function saveUsername() {
+  const username = document.getElementById('settingsUsername').value.trim();
+  if (!username) { showToast('⚠ Username wajib', 'error'); return; }
+  try { await fbUpdateUser(State.user.uid, { handle: '@' + username.replace(/[^a-z0-9]/gi,'').toLowerCase() }); State.user = await fbGetUser(State.user.uid); updateAuthUI(); showToast('✓ Username disimpan'); }
+  catch (e) { showToast('⚠ ' + e.message, 'error'); }
+}
+async function toggleChatbot(el) { const s = await fbGetSettings(State.user.uid); const nv = !s.chatbot?.enabled; await fbSaveSettings(State.user.uid, 'chatbot', { enabled: nv }); el.classList.toggle('on', nv); }
+async function setProvider(p) { await fbSaveSettings(State.user.uid, 'chatbot', { provider: p }); render(); }
+async function saveChatbotSettings() { await fbSaveSettings(State.user.uid, 'chatbot', { apiKey: document.getElementById('chatbotApiKey').value, model: document.getElementById('chatbotModel').value, systemInstruction: document.getElementById('chatbotSystem').value }); showToast('✓ Chatbot disimpan'); }
+async function toggleWebhook(el) { const s = await fbGetSettings(State.user.uid); const nv = !s.webhook?.enabled; await fbSaveSettings(State.user.uid, 'webhook', { enabled: nv }); el.classList.toggle('on', nv); }
+async function saveWebhookSettings() { await fbSaveSettings(State.user.uid, 'webhook', { url: document.getElementById('webhookUrl').value, method: document.getElementById('webhookMethod').value }); showToast('✓ Webhook disimpan'); }
+async function toggleMainSetting(key, el) { const s = await fbGetSettings(State.user.uid); const nv = !s.main?.[key]; await fbSaveSettings(State.user.uid, 'main', { [key]: nv }); el.classList.toggle('on', nv); }
+
+/* ============ FEEDBACK ============ */
+function renderFeedback() {
+  return `
+  <div class="page-wrap">
+    <div style="text-align:center;padding:2rem 0;">
+      <div style="width:80px;height:80px;border-radius:var(--r-lg);background:var(--accent);display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;font-size:2rem;">💬</div>
+      <h2 style="font-size:1.5rem;margin-bottom:.5rem;font-weight:900;">Feedback & Support</h2>
+      <p style="color:var(--muted);font-size:.9rem;max-width:400px;margin:0 auto 1.5rem;">Sampaikan kendala atau laporan.</p>
+    </div>
+    <div style="max-width:600px;margin:0 auto;">
+      <div class="card">
+        <form onsubmit="submitFeedback(event)">
+          <div class="form-group"><label>Nama <span style="color:var(--muted);font-weight:400;">(opsional)</span></label><input type="text" class="form-input" id="fbName" value="${State.user?.name||''}"></div>
+          <div class="form-group"><label>Email <span style="color:var(--muted);font-weight:400;">(opsional)</span></label><input type="email" class="form-input" id="fbEmail" value="${State.user?.email||''}"></div>
+          <div class="form-group"><label>Pesan</label><textarea class="form-input" id="fbMessage" rows="5" placeholder="Minimal 20 karakter..." required minlength="20" style="resize:vertical;font-family:inherit;"></textarea></div>
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:.85rem;">Kirim →</button>
+        </form>
+      </div>
+    </div>
+  </div>`;
+}
+async function submitFeedback(e) {
+  e.preventDefault();
+  const msg = document.getElementById('fbMessage').value.trim();
+  if (msg.length < 20) { showToast('⚠ Minimal 20 karakter', 'error'); return; }
+  if (State.user) await fbLogActivity(State.user.uid, 'Feedback dikirim', msg.substring(0,80) + (msg.length > 80 ? '...' : ''), '💬');
+  showToast('✓ Terima kasih!');
+  e.target.reset();
+}
+
+/* ============ ADMIN PANEL ============ */
+function renderAdminPanel() {
+  if (!isAdmin()) {
+    return `<div class="page-wrap"><div style="max-width:440px;margin:3rem auto;text-align:center;"><div class="card" style="padding:2.5rem 1.5rem;"><div style="font-size:3rem;margin-bottom:1rem;">🔒</div><h2 style="font-size:1.3rem;margin-bottom:.5rem;">Akses Ditolak</h2><p style="color:var(--muted);font-size:.88rem;margin-bottom:1.5rem;">Halaman ini hanya untuk Administrator.</p><button class="btn-primary" onclick="navigate('home')">Kembali</button></div></div></div>`;
+  }
+  const tabs = [
+    { id:'branding', label:'Branding', icon:'🎨' },
+    { id:'navbar', label:'Navbar', icon:'🧭' },
+    { id:'hero', label:'Hero', icon:'✨' },
+    { id:'stats', label:'Statistik', icon:'📊' },
+    { id:'pricing', label:'Pricing', icon:'💰' },
+    { id:'features', label:'Fitur', icon:'⚙️' },
+    { id:'faq', label:'FAQ', icon:'❓' },
+    { id:'cta', label:'CTA', icon:'📣' },
+    { id:'footer', label:'Footer', icon:'🔻' }
+  ];
+  return `
+  <div class="page-wrap">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem;">
+      <div><h1 style="font-size:1.5rem;margin-bottom:.4rem;">⚙️ Admin Panel</h1><p style="color:var(--muted);font-size:.9rem;">Kelola seluruh konten website.</p></div>
+      <div style="display:flex;gap:.5rem;">
+        <button class="btn-outline btn-sm" onclick="window.open(window.location.origin+window.location.pathname+'#home','_blank')">👁️ Preview</button>
+        <button class="btn-danger btn-sm" onclick="confirmResetAll()">🔄 Reset Semua</button>
+      </div>
+    </div>
+    <div class="admin-layout">
+      <aside class="admin-sidebar">
+        ${tabs.map(t => `<button class="admin-tab ${adminActiveTab===t.id?'active':''}" onclick="switchAdminTab('${t.id}')"><span>${t.icon}</span> ${t.label}</button>`).join('')}
+      </aside>
+      <main class="admin-main" id="adminMain">${renderAdminTab(adminActiveTab)}</main>
+    </div>
+  </div>`;
+}
+function switchAdminTab(tab) {
+  adminActiveTab = tab;
+  const tabs = ['branding','navbar','hero','stats','pricing','features','faq','cta','footer'];
+  document.querySelectorAll('.admin-tab').forEach((b, i) => b.classList.toggle('active', tabs[i] === tab));
+  document.getElementById('adminMain').innerHTML = renderAdminTab(tab);
+}
+function renderAdminTab(tab) {
+  switch (tab) {
+    case 'branding': return adminBranding();
+    case 'navbar': return adminNavbar();
+    case 'hero': return adminHero();
+    case 'stats': return adminStats();
+    case 'pricing': return adminPricing();
+    case 'features': return adminFeatures();
+    case 'faq': return adminFaq();
+    case 'cta': return adminCta();
+    case 'footer': return adminFooter();
+    default: return adminBranding();
+  }
+}
+function adminBranding() {
+  const b = SITE.branding;
+  return `<div class="admin-section">
+    <div class="admin-section-head"><h3>🎨 Branding</h3><div class="admin-section-actions"><button class="btn-outline btn-xs" onclick="adminResetSection('branding')">🔄 Reset</button><button class="btn-primary btn-xs" onclick="adminSaveBranding()">💾 Simpan</button></div></div>
+    <div class="form-group"><label>Nama Brand</label><input type="text" class="form-input" id="admBrandName" value="${b.brandName}"></div>
+    <div class="form-group"><label>Ikon Brand (1 huruf)</label><input type="text" class="form-input" id="admBrandIcon" value="${b.brandIcon}" maxlength="2"></div>
+    <div class="form-group"><label>Tagline</label><input type="text" class="form-input" id="admTagline" value="${b.tagline}"></div>
+    <div class="form-group"><label>Theme Color</label><input type="color" class="form-input" id="admThemeColor" value="${b.themeColor}" style="height:48px;padding:.35rem;"></div>
+    <div class="form-group"><label>Meta Title</label><input type="text" class="form-input" id="admMetaTitle" value="${b.metaTitle}"></div>
+    <div class="form-group"><label>Meta Description</label><textarea class="form-input" id="admMetaDesc" rows="2" style="resize:vertical;font-family:inherit;">${b.metaDescription}</textarea></div>
+  </div>`;
+}
+async function adminSaveBranding() {
+  try {
+    const data = { brandName: document.getElementById('admBrandName').value, brandIcon: document.getElementById('admBrandIcon').value.toUpperCase().charAt(0) || 'H', tagline: document.getElementById('admTagline').value, themeColor: document.getElementById('admThemeColor').value, metaTitle: document.getElementById('admMetaTitle').value, metaDescription: document.getElementById('admMetaDesc').value };
+    await saveSiteSection('branding', data);
+    document.title = data.metaTitle;
+    document.querySelectorAll('.brand').forEach(el => el.innerHTML = `<span class="brand-icon">${data.brandIcon}</span> ${data.brandName}`);
+    showToast('✓ Branding disimpan');
+  } catch (e) { showToast('⚠ ' + e.message, 'error'); }
+}
+function adminNavbar() {
+  const n = SITE.navbar;
+  return `<div class="admin-section">
+    <div class="admin-section-head"><h3>🧭 Menu Navbar</h3><div class="admin-section-actions"><button class="btn-outline btn-xs" onclick="adminResetSection('navbar')">🔄 Reset</button><button class="btn-primary btn-xs" onclick="adminSaveNavbar()">💾 Simpan</button></div></div>
+    <div class="form-group"><label>Label Tombol CTA</label><input type="text" class="form-input" id="admNavCta" value="${n.ctaLabel}"></div>
+    <div class="form-group"><label>Target CTA</label><input type="text" class="form-input" id="admNavCtaPage" value="${n.ctaPage}"></div>
+    <div style="margin-top:1.5rem;display:flex;justify-content:space-between;align-items:center;"><div style="font-weight:700;font-size:.9rem;">Menu Links (${n.links.length})</div><button class="btn-primary btn-xs" onclick="adminAddNavLink()">+ Tambah</button></div>
+    <div id="admNavLinks" style="margin-top:.75rem;">${n.links.map((l,i) => `<div class="admin-list-item"><div class="admin-list-item-row"><input type="text" class="form-input" value="${l.label}" onchange="updateNavLink(${i},'label',this.value)"><input type="text" class="form-input" value="${l.page}" onchange="updateNavLink(${i},'page',this.value)"><button class="btn-danger btn-xs" onclick="adminRemoveNavLink(${i})">🗑️</button></div></div>`).join('')}</div>
+  </div>`;
+}
+window._tempNavbar = null;
+function ensureTempNavbar() { if (!window._tempNavbar) window._tempNavbar = JSON.parse(JSON.stringify(SITE.navbar)); }
+function adminAddNavLink() { ensureTempNavbar(); window._tempNavbar.links.push({ label:'Menu Baru', page:'home' }); SITE.navbar.links = window._tempNavbar.links; document.getElementById('adminMain').innerHTML = adminNavbar(); }
+function adminRemoveNavLink(i) { ensureTempNavbar(); window._tempNavbar.links.splice(i, 1); SITE.navbar.links = window._tempNavbar.links; document.getElementById('adminMain').innerHTML = adminNavbar(); }
+function updateNavLink(i, key, val) { ensureTempNavbar(); window._tempNavbar.links[i][key] = val; SITE.navbar.links = window._tempNavbar.links; }
+async function adminSaveNavbar() {
+  try {
+    const data = { links: window._tempNavbar?.links || SITE.navbar.links, ctaLabel: document.getElementById('admNavCta').value, ctaPage: document.getElementById('admNavCtaPage').value };
+    await saveSiteSection('navbar', data);
+    window._tempNavbar = null;
+    showToast('✓ Navbar disimpan'); location.reload();
+  } catch (e) { showToast('⚠ ' + e.message, 'error'); }
+}
+function adminHero() {
+  const h = SITE.hero;
+  return `<div class="admin-section">
+    <div class="admin-section-head"><h3>✨ Hero Section</h3><div class="admin-section-actions"><button class="btn-outline btn-xs" onclick="adminResetSection('hero')">🔄 Reset</button><button class="btn-primary btn-xs" onclick="adminSaveHero()">💾 Simpan</button></div></div>
+    <div class="form-group"><label>Badge Text</label><input type="text" class="form-input" id="admHeroBadge" value="${h.badge}"></div>
+    <div class="form-group"><label style="display:flex;align-items:center;gap:.5rem;"><input type="checkbox" id="admHeroBadgeActive" ${h.badgeActive?'checked':''}> Tampilkan Badge</label></div>
+    <div class="form-group"><label>Judul Utama</label><input type="text" class="form-input" id="admHeroTitle" value="${h.title}"></div>
+    <div class="form-group"><label>Judul Highlight</label><input type="text" class="form-input" id="admHeroHighlight" value="${h.titleHighlight}"></div>
+    <div class="form-group"><label>Deskripsi</label><textarea class="form-input" id="admHeroDesc" rows="3" style="resize:vertical;font-family:inherit;">${h.description}</textarea></div>
+    <div class="form-group"><label>Tombol Utama</label><input type="text" class="form-input" id="admHeroPrimary" value="${h.primaryBtn}"></div>
+    <div class="form-group"><label>Target Tombol Utama</label><input type="text" class="form-input" id="admHeroPrimaryPage" value="${h.primaryBtnPage}"></div>
+    <div class="form-group"><label>Tombol Sekunder</label><input type="text" class="form-input" id="admHeroSecondary" value="${h.secondaryBtn}"></div>
+    <div class="form-group"><label>Target Tombol Sekunder</label><input type="text" class="form-input" id="admHeroSecondaryTarget" value="${h.secondaryBtnTarget}"></div>
+  </div>`;
+}
+async function adminSaveHero() {
+  try {
+    const data = { badge: document.getElementById('admHeroBadge').value, badgeActive: document.getElementById('admHeroBadgeActive').checked, title: document.getElementById('admHeroTitle').value, titleHighlight: document.getElementById('admHeroHighlight').value, description: document.getElementById('admHeroDesc').value, primaryBtn: document.getElementById('admHeroPrimary').value, primaryBtnPage: document.getElementById('admHeroPrimaryPage').value, secondaryBtn: document.getElementById('admHeroSecondary').value, secondaryBtnTarget: document.getElementById('admHeroSecondaryTarget').value };
+    await saveSiteSection('hero', data);
+    showToast('✓ Hero disimpan');
+  } catch (e) { showToast('⚠ ' + e.message, 'error'); }
+}
+function adminStats() {
+  const s = SITE.stats;
+  return `<div class="admin-section">
+    <div class="admin-section-head"><h3>📊 Statistik</h3><div class="admin-section-actions"><button class="btn-outline btn-xs" onclick="adminResetSection('stats')">🔄 Reset</button><button class="btn-primary btn-xs" onclick="adminSaveStats()">💾 Simpan</button></div></div>
+    <div class="form-group"><label>Judul</label><input type="text" class="form-input" id="admStatsTitle" value="${s.title}"></div>
+    <div class="form-group"><label>Subjudul</label><input type="text" class="form-input" id="admStatsSub" value="${s.subtitle}"></div>
+    <div style="margin-top:1.5rem;display:flex;justify-content:space-between;align-items:center;"><div style="font-weight:700;font-size:.9rem;">Items (${s.items.length})</div><button class="btn-primary btn-xs" onclick="adminAddStat()">+ Tambah</button></div>
+    <div style="margin-top:.75rem;">${s.items.map((it,i) => `<div class="admin-list-item"><div class="admin-list-item-row"><input type="text" class="form-input" value="${it.icon}" onchange="updateStatItem(${i},'icon',this.value)" style="max-width:70px;"><input type="text" class="form-input" value="${it.value}" onchange="updateStatItem(${i},'value',this.value)"><input type="text" class="form-input" value="${it.label}" onchange="updateStatItem(${i},'label',this.value)"><input type="text" class="form-input" value="${it.meta}" onchange="updateStatItem(${i},'meta',this.value)"><button class="btn-danger btn-xs" onclick="adminRemoveStat(${i})">🗑️</button></div></div>`).join('')}</div>
+  </div>`;
+}
+window._tempStats = null;
+function ensureTempStats() { if (!window._tempStats) window._tempStats = JSON.parse(JSON.stringify(SITE.stats)); }
+function adminAddStat() { ensureTempStats(); window._tempStats.items.push({ icon:'⭐', value:'0', label:'Baru', meta:'Metadata', dynamic:null }); SITE.stats.items = window._tempStats.items; document.getElementById('adminMain').innerHTML = adminStats(); }
+function adminRemoveStat(i) { ensureTempStats(); window._tempStats.items.splice(i, 1); SITE.stats.items = window._tempStats.items; document.getElementById('adminMain').innerHTML = adminStats(); }
+function updateStatItem(i, key, val) { ensureTempStats(); window._tempStats.items[i][key] = val; SITE.stats.items = window._tempStats.items; }
+async function adminSaveStats() {
+  try {
+    const data = { title: document.getElementById('admStatsTitle').value, subtitle: document.getElementById('admStatsSub').value, items: window._tempStats?.items || SITE.stats.items };
+    await saveSiteSection('stats', data);
+    window._tempStats = null;
+    showToast('✓ Statistik disimpan');
+  } catch (e) { showToast('⚠ ' + e.message, 'error'); }
+}
+function adminPricing() {
+  const p = SITE.pricing;
+  return `<div class="admin-section">
+    <div class="admin-section-head"><h3>💰 Pricing</h3><div class="admin-section-actions"><button class="btn-outline btn-xs" onclick="adminResetSection('pricing')">🔄 Reset</button><button class="btn-primary btn-xs" onclick="adminSavePricing()">💾 Simpan</button></div></div>
+    <div class="form-group"><label>Judul</label><input type="text" class="form-input" id="admPricingTitle" value="${p.title}"></div>
+    <div class="form-group"><label>Subjudul</label><input type="text" class="form-input" id="admPricingSub" value="${p.subtitle}"></div>
+    <div style="margin-top:1.5rem;display:flex;justify-content:space-between;align-items:center;"><div style="font-weight:700;font-size:.9rem;">Paket (${p.plans.length})</div><button class="btn-primary btn-xs" onclick="adminAddPlan()">+ Tambah</button></div>
+    <div style="margin-top:.75rem;">${p.plans.map((plan,i) => `<div class="admin-list-item" style="flex-direction:column;align-items:stretch;"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem;"><strong style="font-size:.85rem;">#${i+1}: ${plan.name}</strong><div style="display:flex;gap:.35rem;"><label style="font-size:.7rem;display:flex;align-items:center;gap:.25rem;color:var(--muted);cursor:pointer;"><input type="checkbox" ${plan.featured?'checked':''} onchange="updatePlanField(${i},'featured',this.checked)"> Featured</label><button class="btn-danger btn-xs" onclick="adminRemovePlan(${i})">🗑️</button></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem;"><input type="text" class="form-input" value="${plan.name}" onchange="updatePlanField(${i},'name',this.value)"><input type="text" class="form-input" value="${plan.desc}" onchange="updatePlanField(${i},'desc',this.value)"><input type="text" class="form-input" value="${plan.price}" onchange="updatePlanField(${i},'price',this.value)"><input type="text" class="form-input" value="${plan.period}" onchange="updatePlanField(${i},'period',this.value)"></div><div style="margin-top:.5rem;"><div style="font-size:.72rem;color:var(--muted);margin-bottom:.25rem;">Fitur (1/baris):</div><textarea class="form-input" rows="3" style="resize:vertical;font-family:inherit;font-size:.8rem;" onchange="updatePlanField(${i},'features',this.value.split('\\n').map(s=>s.trim()).filter(s=>s))">${plan.features.join('\n')}</textarea></div></div>`).join('')}</div>
+  </div>`;
+}
+window._tempPricing = null;
+function ensureTempPricing() { if (!window._tempPricing) window._tempPricing = JSON.parse(JSON.stringify(SITE.pricing)); }
+function adminAddPlan() { ensureTempPricing(); window._tempPricing.plans.push({ name:'Paket Baru', desc:'Deskripsi', price:'0', period:'30 Hari', featured:false, features:['Fitur 1'], disabled:[] }); SITE.pricing.plans = window._tempPricing.plans; document.getElementById('adminMain').innerHTML = adminPricing(); }
+function adminRemovePlan(i) { ensureTempPricing(); window._tempPricing.plans.splice(i, 1); SITE.pricing.plans = window._tempPricing.plans; document.getElementById('adminMain').innerHTML = adminPricing(); }
+function updatePlanField(i, key, val) { ensureTempPricing(); window._tempPricing.plans[i][key] = val; SITE.pricing.plans = window._tempPricing.plans; }
+async function adminSavePricing() {
+  try {
+    const data = { title: document.getElementById('admPricingTitle').value, subtitle: document.getElementById('admPricingSub').value, plans: window._tempPricing?.plans || SITE.pricing.plans };
+    await saveSiteSection('pricing', data);
+    window._tempPricing = null;
+    showToast('✓ Pricing disimpan');
+  } catch (e) { showToast('⚠ ' + e.message, 'error'); }
+}
+function adminFeatures() {
+  const f = SITE.features;
+  return `<div class="admin-section">
+    <div class="admin-section-head"><h3>⚙️ Fitur</h3><div class="admin-section-actions"><button class="btn-outline btn-xs" onclick="adminResetSection('features')">🔄 Reset</button><button class="btn-primary btn-xs" onclick="adminSaveFeatures()">💾 Simpan</button></div></div>
+    <div class="form-group"><label>Judul</label><input type="text" class="form-input" id="admFeatTitle" value="${f.title}"></div>
+    <div class="form-group"><label>Subjudul</label><input type="text" class="form-input" id="admFeatSub" value="${f.subtitle}"></div>
+    <div style="margin-top:1.5rem;display:flex;justify-content:space-between;align-items:center;"><div style="font-weight:700;font-size:.9rem;">Fitur (${f.items.length})</div><button class="btn-primary btn-xs" onclick="adminAddFeature()">+ Tambah</button></div>
+    <div style="margin-top:.75rem;">${f.items.map((it,i) => `<div class="admin-list-item"><div class="admin-list-item-row"><input type="text" class="form-input" value="${it.icon}" onchange="updateFeature(${i},'icon',this.value)" style="max-width:70px;"><input type="text" class="form-input" value="${it.title}" onchange="updateFeature(${i},'title',this.value)"><input type="text" class="form-input" value="${it.desc}" onchange="updateFeature(${i},'desc',this.value)"><button class="btn-danger btn-xs" onclick="adminRemoveFeature(${i})">🗑️</button></div></div>`).join('')}</div>
+  </div>`;
+}
+window._tempFeatures = null;
+function ensureTempFeatures() { if (!window._tempFeatures) window._tempFeatures = JSON.parse(JSON.stringify(SITE.features)); }
+function adminAddFeature() { ensureTempFeatures(); window._tempFeatures.items.push({ icon:'⭐', title:'Fitur Baru', desc:'Deskripsi.' }); SITE.features.items = window._tempFeatures.items; document.getElementById('adminMain').innerHTML = adminFeatures(); }
+function adminRemoveFeature(i) { ensureTempFeatures(); window._tempFeatures.items.splice(i, 1); SITE.features.items = window._tempFeatures.items; document.getElementById('adminMain').innerHTML = adminFeatures(); }
+function updateFeature(i, key, val) { ensureTempFeatures(); window._tempFeatures.items[i][key] = val; SITE.features.items = window._tempFeatures.items; }
+async function adminSaveFeatures() {
+  try {
+    const data = { title: document.getElementById('admFeatTitle').value, subtitle: document.getElementById('admFeatSub').value, items: window._tempFeatures?.items || SITE.features.items };
+    await saveSiteSection('features', data);
+    window._tempFeatures = null;
+    showToast('✓ Fitur disimpan');
+  } catch (e) { showToast('⚠ ' + e.message, 'error'); }
+}
+function adminFaq() {
+  const f = SITE.faq;
+  return `<div class="admin-section">
+    <div class="admin-section-head"><h3>❓ FAQ</h3><div class="admin-section-actions"><button class="btn-outline btn-xs" onclick="adminResetSection('faq')">🔄 Reset</button><button class="btn-primary btn-xs" onclick="adminSaveFaq()">💾 Simpan</button></div></div>
+    <div class="form-group"><label>Judul</label><input type="text" class="form-input" id="admFaqTitle" value="${f.title}"></div>
+    <div class="form-group"><label>Subjudul</label><input type="text" class="form-input" id="admFaqSub" value="${f.subtitle}"></div>
+    <div style="margin-top:1.5rem;display:flex;justify-content:space-between;align-items:center;"><div style="font-weight:700;font-size:.9rem;">Pertanyaan (${f.items.length})</div><button class="btn-primary btn-xs" onclick="adminAddFaq()">+ Tambah</button></div>
+    <div style="margin-top:.75rem;">${f.items.map((it,i) => `<div class="admin-list-item" style="flex-direction:column;align-items:stretch;"><div style="display:flex;gap:.5rem;align-items:center;margin-bottom:.5rem;"><input type="text" class="form-input" value="${it.q}" onchange="updateFaq(${i},'q',this.value)"><button class="btn-danger btn-xs" onclick="adminRemoveFaq(${i})">🗑️</button></div><textarea class="form-input" rows="3" style="resize:vertical;font-family:inherit;font-size:.85rem;" onchange="updateFaq(${i},'a',this.value)">${it.a}</textarea></div>`).join('')}</div>
+  </div>`;
+}
+window._tempFaq = null;
+function ensureTempFaq() { if (!window._tempFaq) window._tempFaq = JSON.parse(JSON.stringify(SITE.faq)); }
+function adminAddFaq() { ensureTempFaq(); window._tempFaq.items.push({ q:'Pertanyaan Baru?', a:'Jawaban baru.' }); SITE.faq.items = window._tempFaq.items; document.getElementById('adminMain').innerHTML = adminFaq(); }
+function adminRemoveFaq(i) { ensureTempFaq(); window._tempFaq.items.splice(i, 1); SITE.faq.items = window._tempFaq.items; document.getElementById('adminMain').innerHTML = adminFaq(); }
+function updateFaq(i, key, val) { ensureTempFaq(); window._tempFaq.items[i][key] = val; SITE.faq.items = window._tempFaq.items; }
+async function adminSaveFaq() {
+  try {
+    const data = { title: document.getElementById('admFaqTitle').value, subtitle: document.getElementById('admFaqSub').value, items: window._tempFaq?.items || SITE.faq.items };
+    await saveSiteSection('faq', data);
+    window._tempFaq = null;
+    showToast('✓ FAQ disimpan');
+  } catch (e) { showToast('⚠ ' + e.message, 'error'); }
+}
+function adminCta() {
+  const c = SITE.cta;
+  return `<div class="admin-section">
+    <div class="admin-section-head"><h3>📣 CTA Banner</h3><div class="admin-section-actions"><button class="btn-outline btn-xs" onclick="adminResetSection('cta')">🔄 Reset</button><button class="btn-primary btn-xs" onclick="adminSaveCta()">💾 Simpan</button></div></div>
+    <div class="form-group"><label style="display:flex;align-items:center;gap:.5rem;"><input type="checkbox" id="admCtaEnabled" ${c.enabled?'checked':''}> Tampilkan</label></div>
+    <div class="form-group"><label>Judul</label><input type="text" class="form-input" id="admCtaTitle" value="${c.title}"></div>
+    <div class="form-group"><label>Deskripsi</label><textarea class="form-input" id="admCtaDesc" rows="3" style="resize:vertical;font-family:inherit;">${c.description}</textarea></div>
+    <div class="form-group"><label>Label Tombol</label><input type="text" class="form-input" id="admCtaBtn" value="${c.buttonLabel}"></div>
+    <div class="form-group"><label>Target Halaman</label><input type="text" class="form-input" id="admCtaPage" value="${c.buttonPage}"></div>
+    <div class="form-group"><label>Background</label><select class="form-input" id="admCtaBg"><option value="accent" ${c.background==='accent'?'selected':''}>Accent</option><option value="dark" ${c.background==='dark'?'selected':''}>Dark</option></select></div>
+  </div>`;
+}
+async function adminSaveCta() {
+  try {
+    const data = { enabled: document.getElementById('admCtaEnabled').checked, title: document.getElementById('admCtaTitle').value, description: document.getElementById('admCtaDesc').value, buttonLabel: document.getElementById('admCtaBtn').value, buttonPage: document.getElementById('admCtaPage').value, background: document.getElementById('admCtaBg').value };
+    await saveSiteSection('cta', data);
+    showToast('✓ CTA disimpan');
+  } catch (e) { showToast('⚠ ' + e.message, 'error'); }
+}
+function adminFooter() {
+  const f = SITE.footer;
+  return `<div class="admin-section">
+    <div class="admin-section-head"><h3>🔻 Footer</h3><div class="admin-section-actions"><button class="btn-outline btn-xs" onclick="adminResetSection('footer')">🔄 Reset</button><button class="btn-primary btn-xs" onclick="adminSaveFooter()">💾 Simpan</button></div></div>
+    <div class="form-group"><label>Deskripsi</label><textarea class="form-input" id="admFootDesc" rows="2" style="resize:vertical;font-family:inherit;">${f.description}</textarea></div>
+    <div class="form-group"><label>Copyright</label><input type="text" class="form-input" id="admFootCopy" value="${f.copyright}"></div>
+    <div style="margin-top:1.5rem;"><div style="font-weight:700;font-size:.9rem;margin-bottom:.75rem;">Kolom Footer</div>${f.columns.map((col,ci) => `<div class="admin-list-item" style="flex-direction:column;align-items:stretch;"><div style="display:flex;gap:.5rem;align-items:center;margin-bottom:.5rem;"><input type="text" class="form-input" value="${col.title}" onchange="updateFooterCol(${ci},'title',this.value)"><button class="btn-danger btn-xs" onclick="adminRemoveFooterCol(${ci})">🗑️</button></div><div style="font-size:.72rem;color:var(--muted);margin-bottom:.25rem;">Links (Label|page per baris):</div><textarea class="form-input" rows="3" style="resize:vertical;font-family:inherit;font-size:.8rem;" onchange="updateFooterColLinks(${ci},this.value)">${col.links.map(l => `${l.label}|${l.page}`).join('\n')}</textarea></div>`).join('')}<button class="btn-primary btn-xs" onclick="adminAddFooterCol()" style="margin-top:.5rem;">+ Tambah Kolom</button></div>
+  </div>`;
+}
+window._tempFooter = null;
+function ensureTempFooter() { if (!window._tempFooter) window._tempFooter = JSON.parse(JSON.stringify(SITE.footer)); }
+function adminAddFooterCol() { ensureTempFooter(); window._tempFooter.columns.push({ title:'Kolom Baru', links:[{ label:'Link', page:'home' }] }); SITE.footer.columns = window._tempFooter.columns; document.getElementById('adminMain').innerHTML = adminFooter(); }
+function adminRemoveFooterCol(i) { ensureTempFooter(); window._tempFooter.columns.splice(i, 1); SITE.footer.columns = window._tempFooter.columns; document.getElementById('adminMain').innerHTML = adminFooter(); }
+function updateFooterCol(i, key, val) { ensureTempFooter(); window._tempFooter.columns[i][key] = val; SITE.footer.columns = window._tempFooter.columns; }
+function updateFooterColLinks(i, val) { ensureTempFooter(); window._tempFooter.columns[i].links = val.split('\n').filter(l => l.trim()).map(l => { const [label, page] = l.split('|').map(s => s.trim()); return { label: label || 'Link', page: page || 'home' }; }); SITE.footer.columns = window._tempFooter.columns; }
+async function adminSaveFooter() {
+  try {
+    const data = { description: document.getElementById('admFootDesc').value, copyright: document.getElementById('admFootCopy').value, columns: window._tempFooter?.columns || SITE.footer.columns };
+    await saveSiteSection('footer', data);
+    window._tempFooter = null;
+    showToast('✓ Footer disimpan');
+  } catch (e) { showToast('⚠ ' + e.message, 'error'); }
+}
+async function adminResetSection(section) {
+  if (!confirm(`Reset "${section}" ke default?`)) return;
+  try { await resetSiteSection(section); document.getElementById('adminMain').innerHTML = renderAdminTab(adminActiveTab); showToast(`✓ ${section} direset`); }
+  catch (e) { showToast('⚠ ' + e.message, 'error'); }
+}
+function confirmResetAll() {
+  showModal(`<div class="modal-head"><h3 style="color:var(--danger);">⚠️ Reset Semua Konten</h3><button class="modal-close" onclick="closeModal()">×</button></div><p style="color:var(--muted);font-size:.9rem;margin-bottom:1.25rem;">Semua konten dikembalikan ke default.</p><div style="display:flex;gap:.5rem;"><button class="btn-outline" style="flex:1;justify-content:center;" onclick="closeModal()">Batal</button><button class="btn-primary" style="flex:1;justify-content:center;background:var(--danger);color:#fff;" onclick="doResetAll()">Ya, Reset</button></div>`);
+}
+async function doResetAll() {
+  try { await resetAllSiteContent(); closeModal(); showToast('✓ Semua direset'); document.getElementById('adminMain').innerHTML = renderAdminTab(adminActiveTab); }
+  catch (e) { showToast('⚠ ' + e.message, 'error'); }
+}
+
+/* ============ EXPOSE ============ */
+Object.assign(window, {
+  navigate, goBack, scrollToSection, sheetNav, handleNavAuth, updateAuthUI,
+  toggleTheme, handleLogout, openSheet, closeSheet, openProfileMenu, closeProfileMenu,
+  profileMenuNav, showModal, closeModal, togglePassVisibility, copyText, formatTimeAgo,
+  handleAuthSubmit, handleGoogleLogin, showForgotPassword, submitForgotPassword,
+  handleVerifySubmit, handleResendCode, cancelVerification, renderRegisterVerify,
+  toggleFaq, selectPlan, wizardNext, wizardPrev, wizardSetMethod, wizardCreate,
+  createNewBot, viewBotDetail, confirmDeleteBot, doDeleteBot,
+  initTerminal, runCommand, toggleApiVisibility, openEditProfile, saveProfile,
+  handleAvatarUpload, removeAvatar, confirmDeleteAccount, deleteAccount,
+  saveUsername, toggleChatbot, setProvider, saveChatbotSettings,
+  toggleWebhook, saveWebhookSettings, toggleMainSetting, submitFeedback,
+  switchAdminTab, adminBranding, adminSaveBranding, adminNavbar, adminSaveNavbar,
+  adminAddNavLink, adminRemoveNavLink, updateNavLink,
+  adminHero, adminSaveHero, adminStats, adminSaveStats, adminAddStat, adminRemoveStat, updateStatItem,
+  adminPricing, adminSavePricing, adminAddPlan, adminRemovePlan, updatePlanField,
+  adminFeatures, adminSaveFeatures, adminAddFeature, adminRemoveFeature, updateFeature,
+  adminFaq, adminSaveFaq, adminAddFaq, adminRemoveFaq, updateFaq,
+  adminCta, adminSaveCta, adminFooter, adminSaveFooter, adminAddFooterCol, adminRemoveFooterCol,
+  updateFooterCol, updateFooterColLinks, adminResetSection, confirmResetAll, doResetAll,
+  loadSiteContent, saveSiteSection, resetSiteSection, isAdmin
+});
+
+/* ============ BOOT ============ */
+(async function boot() {
+  try { const t = localStorage.getItem('hunzai_theme'); if (t === 'dark') { State.theme = 'dark'; document.body.classList.add('dark-mode'); } } catch(e) {}
+
+  onAuthStateChanged(auth, async (firebaseUser) => {
+    if (firebaseUser) {
+      State.firebaseUser = firebaseUser;
+      let userData = await fbGetUser(firebaseUser.uid);
+      if (!userData) {
+        const isAdminEmail = firebaseUser.email.toLowerCase() === ADMIN_EMAIL;
+        await fbCreateUserDoc(firebaseUser.uid, {
+          email: firebaseUser.email.toLowerCase(),
+          name: firebaseUser.displayName || firebaseUser.email.split('@')[0],
+          handle: '@' + firebaseUser.email.split('@')[0].toLowerCase(),
+          avatar: (firebaseUser.displayName || firebaseUser.email[0]).charAt(0).toUpperCase(),
+          avatarImage: firebaseUser.photoURL || null,
+          provider: 'G Akun Google',
+          role: isAdminEmail ? 'Administrator' : 'User',
+          badge: isAdminEmail ? '👑 ADMIN' : '💎 FREE',
+          plan: isAdminEmail ? 'Infinity' : 'Free',
+          googleLinked: true, verified: true
+        });
+        userData = await fbGetUser(firebaseUser.uid);
+      }
+      State.user = userData;
+      try { await fbUpdateUser(firebaseUser.uid, { isOnline: true, lastLogin: serverTimestamp() }); } catch(e) {}
+    } else {
+      State.user = null; State.firebaseUser = null;
+    }
+    updateAuthUI();
+
+    await loadSiteContent();
+    if (SITE.branding) {
+      document.title = SITE.branding.metaTitle || document.title;
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute('content', SITE.branding.metaDescription || '');
+    }
+
+    document.getElementById('bootScreen').style.display = 'none';
+    document.getElementById('topNav').style.display = 'block';
+    document.getElementById('bottomNav').style.display = 'flex';
+
+    const hash = window.location.hash.replace('#','') || 'home';
+    const validPages = ['home','login','register','dashboard','bots','terminal','profile','settings','feedback','admin'];
+    State.currentPage = validPages.includes(hash) ? hash : 'home';
+
+    await render();
+    if (State.user) setTimeout(() => showToast(`✓ Selamat datang, ${State.user.name}!`), 500);
+  });
+
+  window.addEventListener('hashchange', () => {
+    const h = window.location.hash.replace('#','') || 'home';
+    const validPages = ['home','login','register','dashboard','bots','terminal','profile','settings','feedback','admin'];
+    if (validPages.includes(h) && h !== State.currentPage) { State.currentPage = h; render(); }
+  });
+  window.addEventListener('resize', () => {
+    const backBtn = document.getElementById('backBtn');
+    if (backBtn) backBtn.style.display = (State.history.length > 0 && window.innerWidth < 992) ? 'block' : 'none';
+  });
+})();
+</script>
+</body>
+</html>

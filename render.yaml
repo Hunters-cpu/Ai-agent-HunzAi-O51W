@@ -1,0 +1,24 @@
+services:
+  - type: worker
+    name: hunzai-backend
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: starter
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: FIREBASE_PROJECT_ID
+        sync: false
+      - key: FIREBASE_CLIENT_EMAIL
+        sync: false
+      - key: FIREBASE_PRIVATE_KEY
+        sync: false
+      - key: POLL_INTERVAL
+        value: "10000"
+      - key: LOG_LEVEL
+        value: "info"
+    autoDeploy: true
+    disk:
+      name: sessions
+      mountPath: /app/sessions
+      sizeGB: 1
